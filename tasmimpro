@@ -1,0 +1,2537 @@
+
+<!DOCTYPE html>
+<html lang="uz">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI’dan YouTube orqali $10,000 gacha daromad</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #1f2937;
+            --secondary: #f59e0b;
+            --accent: #0f766e;
+            --neutral: #f3f4f6;
+            --base: #ffffff;
+        }
+        
+        .font-display { font-family: 'Playfair Display', serif; }
+        .font-body { font-family: 'Inter', sans-serif; }
+        
+        .hero-gradient {
+            background: linear-gradient(135deg, #0f766e 0%, #1f2937 100%);
+        }
+        
+        .text-shadow {
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        
+        .glass-effect {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        
+        .toc-fixed {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            width: 280px;
+            max-height: calc(100vh - 40px);
+            overflow-y: auto;
+            z-index: 50;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        
+        .main-content {
+            margin-left: 320px;
+            padding-right: 40px;
+        }
+        
+        @media (max-width: 1280px) {
+            .toc-fixed {
+                position: relative;
+                width: 100%;
+                margin-bottom: 20px;
+            }
+            .main-content {
+                margin-left: 0;
+                padding-right: 20px;
+            }
+        }
+        
+        .bento-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            grid-template-rows: auto auto;
+            gap: 20px;
+            height: 60vh;
+        }
+        
+        .bento-item-1 {
+            grid-column: 1 / 2;
+            grid-row: 1 / 3;
+        }
+        
+        .bento-item-2 {
+            grid-column: 2 / 3;
+            grid-row: 1 / 2;
+        }
+        
+        .bento-item-3 {
+            grid-column: 2 / 3;
+            grid-row: 2 / 3;
+        }
+        
+        .chart-container {
+            background: white;
+            border-radius: 12px;
+            padding: 24px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+            border: 1px solid #e5e7eb;
+        }
+        
+        .citation {
+            color: #0f766e;
+            font-weight: 500;
+            text-decoration: none;
+            border-bottom: 1px dotted #0f766e;
+        }
+        
+        .citation:hover {
+            background-color: #f0fdfa;
+        }
+        
+        .highlight-box {
+            background: linear-gradient(135deg, #f0fdfa 0%, #ecfdf5 100%);
+            border-left: 4px solid #0f766e;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 20px 0;
+        }
+        
+        @media (max-width: 768px) {
+            .toc-fixed {
+                display: none;
+            }
+            
+            .main-content {
+                margin-left: 0;
+                padding: 0 20px;
+            }
+            
+            .bento-grid {
+                grid-template-columns: 1fr;
+                grid-template-rows: auto;
+                height: auto;
+            }
+            
+            .bento-item-1,
+            .bento-item-2,
+            .bento-item-3 {
+                grid-column: 1;
+                grid-row: auto;
+            }
+            
+            .hero-gradient .font-display.text-5xl {
+                font-size: 2.5rem;
+                line-height: 1.2;
+            }
+            
+            .hero-gradient .text-xl {
+                font-size: 1rem;
+            }
+            
+            .hero-gradient img {
+                height: 12rem;
+            }
+            
+            .hero-gradient .glass-effect {
+                padding: 1rem;
+            }
+        }
+    </style>
+  </head>
+
+  <body class="font-body bg-gray-50 text-gray-900">
+    <!-- Table of Contents -->
+    <nav class="toc-fixed">
+      <div class="p-6">
+        <h3 class="font-display font-semibold text-lg text-gray-800 mb-4">Mundarija</h3>
+        <ul class="space-y-2 text-sm">
+          <li>
+            <a href="#intro" class="block py-2 px-3 rounded-lg hover:bg-teal-50 text-teal-800 hover:text-teal-900 transition-colors">1. Kirish</a>
+          </li>
+          <li>
+            <a href="#problem" class="block py-2 px-3 rounded-lg hover:bg-teal-50 text-teal-800 hover:text-teal-900 transition-colors">2. Muammo</a>
+          </li>
+          <li>
+            <a href="#why-ai-youtube" class="block py-2 px-3 rounded-lg hover:bg-teal-50 text-teal-800 hover:text-teal-900 transition-colors">3. Nega AI + YouTube?</a>
+          </li>
+          <li>
+            <a href="#ai-roadmap" class="block py-2 px-3 rounded-lg hover:bg-teal-50 text-teal-800 hover:text-teal-900 transition-colors">4. AI O'rganish Yo'l Xaritasi</a>
+          </li>
+          <li>
+            <a href="#ai-tools" class="block py-2 px-3 rounded-lg hover:bg-teal-50 text-teal-800 hover:text-teal-900 transition-colors">5. AI Asboblari</a>
+          </li>
+          <li>
+            <a href="#niche-selection" class="block py-2 px-3 rounded-lg hover:bg-teal-50 text-teal-800 hover:text-teal-900 transition-colors">6. Nisha Tanlash</a>
+          </li>
+          <li>
+            <a href="#content-formats" class="block py-2 px-3 rounded-lg hover:bg-teal-50 text-teal-800 hover:text-teal-900 transition-colors">7. Kontent Formatlari</a>
+          </li>
+          <li>
+            <a href="#automation" class="block py-2 px-3 rounded-lg hover:bg-teal-50 text-teal-800 hover:text-teal-900 transition-colors">8. Avtomatlashtirish</a>
+          </li>
+          <li>
+            <a href="#roadmap-3months" class="block py-2 px-3 rounded-lg hover:bg-teal-50 text-teal-800 hover:text-teal-900 transition-colors">9. 3 Oy Yo'l Xaritasi</a>
+          </li>
+          <li>
+            <a href="#case-study" class="block py-2 px-3 rounded-lg hover:bg-teal-50 text-teal-800 hover:text-teal-900 transition-colors">10. Real Misol</a>
+          </li>
+          <li>
+            <a href="#conclusion" class="block py-2 px-3 rounded-lg hover:bg-teal-50 text-teal-800 hover:text-teal-900 transition-colors">11. Xulosa</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="main-content">
+      <!-- Hero Section with Bento Layout -->
+      <section id="intro" class="py-16">
+        <div class="bento-grid">
+          <!-- Main Hero Card -->
+          <div class="bento-item-1 hero-gradient rounded-2xl p-8 flex flex-col justify-center relative overflow-hidden">
+            <div class="absolute inset-0 opacity-20">
+              <img src="https://kimi-img.moonshot.cn/pub/icon/spinner.svg" alt="AI robot working on laptop" class="w-full h-full object-cover" size="large" aspect="wide" color="blue" style="photo" query="AI robot laptop" referrerpolicy="no-referrer" />
+            </div>
+            <div class="relative z-10">
+              <h1 class="font-display text-5xl font-bold text-white mb-6 text-shadow italic leading-tight">
+                AI'dan YouTube orqali
+                <span class="block text-amber-300">$10,000 gacha daromad</span>
+              </h1>
+              <p class="text-xl text-gray-200 mb-8 max-w-2xl">
+                "AI — faqat texnologiya emas, balki yangi iqtisodiy imkoniyat"
+              </p>
+              <div class="flex items-center space-x-4">
+                <div class="glass-effect rounded-lg px-4 py-2">
+                  <span class="text-white font-medium">6 oy - AI o'rganish</span>
+                </div>
+                <div class="glass-effect rounded-lg px-4 py-2">
+                  <span class="text-white font-medium">3 oy - $10,000 daromad</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Stats Card -->
+          <div class="bento-item-2 bg-white rounded-2xl p-6 shadow-lg border border-gray-200">
+            <h3 class="font-display text-xl font-semibold text-gray-800 mb-4">Statistik Ma'lumot</h3>
+            <div class="space-y-4">
+              <div class="flex justify-between items-center">
+                <span class="text-gray-600">AI bozori 2024</span>
+                <span class="font-semibold text-teal-700">$233.46B</span>
+              </div>
+              <div class="flex justify-between items-center">
+                <span class="text-gray-600">Yoshlarni 70% AI biladi</span>
+                <span class="font-semibold text-amber-600">10% daromad oladi</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Strategy Card -->
+          <div class="bento-item-3 bg-gradient-to-br from-amber-50 to-orange-50 rounded-2xl p-6 border border-amber-200">
+            <h3 class="font-display text-lg font-semibold text-gray-800 mb-3">
+              <i class="fas fa-robot text-amber-600 mr-2"></i>
+              "Faceless" Kanal Strategiyasi
+            </h3>
+            <p class="text-gray-700 text-sm">
+              Kameraga chiqmasdan, professional jihozlarsiz va minimal sarmoya bilan ishlaydigan "faceless" kanal strategiyasi.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Problem Section -->
+      <section id="problem" class="py-16">
+        <div class="max-w-6xl mx-auto">
+          <h2 class="font-display text-4xl font-bold text-gray-800 mb-12 text-center">
+            Muammo: Bilimni Pulga Aylantira Olmayotgan Yoshlar
+          </h2>
+
+          <div class="highlight-box">
+            <h3 class="font-display text-2xl font-semibold text-gray-800 mb-4">
+              Statistik Muammo
+            </h3>
+            <p class="text-gray-700 text-lg leading-relaxed mb-6">
+              Bugungi kunda yoshlar orasida keng tarqalgan muammolardan biri o'zlashtirilgan bilimlarni amalda qo'llay olmaslik va ularni moliyaviy daromadga aylantira olmaslikdir. Ko'plab yoshlar AI va kontent yaratish sohasida ma'lum darajada bilimga ega bo'lishsa-da, ular o'z bilimlarini samarali ishlatish yo'lini topolmay qolishmoqda.
+            </p>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mt-8">
+              <div class="bg-white rounded-lg p-6 shadow-md border border-gray-200">
+                <div class="text-center">
+                  <div class="text-4xl font-bold text-teal-600 mb-2">70%</div>
+                  <p class="text-gray-600">Yoshlarning AI va kontent yaratish bilan qiziqishadi</p>
+                </div>
+              </div>
+              <div class="bg-white rounded-lg p-6 shadow-md border border-gray-200">
+                <div class="text-center">
+                  <div class="text-4xl font-bold text-amber-600 mb-2">10%</div>
+                  <p class="text-gray-600">Gina daromad qila oladi</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <p class="text-gray-700 text-lg leading-relaxed mt-8">
+            Bu katta farq yoshlarning bilim va amaliyot o'rtasidagi bo'shliqni ko'rsatadi. Ular nima qilishni bilishsa-da, bunga qanday erishishni bilmaydilar. Ushbu prezentatsiyaning maqsadi shu bo'shliqni to'ldirish va yoshlarga o'z bilimlarini pulga aylantirishning aniq yo'llarini ko'rsatishdir.
+          </p>
+        </div>
+      </section>
+
+      <!-- Why AI + YouTube Section -->
+      <section id="why-ai-youtube" class="py-16 bg-white">
+        <div class="max-w-6xl mx-auto">
+          <h2 class="font-display text-4xl font-bold text-gray-800 mb-12 text-center">
+            Nega AI + YouTube?
+          </h2>
+
+          <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-12">
+            <div class="bg-gradient-to-br from-teal-50 to-cyan-50 rounded-xl p-8 border border-teal-200">
+              <div class="text-teal-600 text-4xl mb-4">
+                <i class="fas fa-chart-line"></i>
+              </div>
+              <h3 class="font-display text-xl font-semibold text-gray-800 mb-4">O'sayotgan AI Bozori</h3>
+              <p class="text-gray-700">AI bozori 2025-yilga kelib <a href="https://www.fortunebusinessinsights.com/industry-reports/artificial-intelligence-market-100114" class="citation">$294.16 milliard dollarga</a> yetishi kutilmoqda.</p>
+            </div>
+
+            <div class="bg-gradient-to-br from-amber-50 to-orange-50 rounded-xl p-8 border border-amber-200">
+              <div class="text-amber-600 text-4xl mb-4">
+                <i class="fas fa-dollar-sign"></i>
+              </div>
+              <h3 class="font-display text-xl font-semibold text-gray-800 mb-4">Yuqori CPM</h3>
+              <p class="text-gray-700">Yuqori to'lanadigan nishalarda CPM <a href="https://www.lenostube.com/en/youtube-cpm-rpm-rates/" class="citation">$15 dan $50 gacha</a> bo'lishi mumkin.</p>
+            </div>
+
+            <div class="bg-gradient-to-br from-purple-50 to-pink-50 rounded-xl p-8 border border-purple-200">
+              <div class="text-purple-600 text-4xl mb-4">
+                <i class="fas fa-play"></i>
+              </div>
+              <h3 class="font-display text-xl font-semibold text-gray-800 mb-4">Oson Kirish</h3>
+              <p class="text-gray-700">Kamera va professional jihozlarsiz, faqat AI vositalar yordamida ishlash mumkin.</p>
+            </div>
+          </div>
+
+          <!-- AI Market Growth Chart -->
+          <div class="chart-container mb-12">
+            <h3 class="font-display text-2xl font-semibold text-gray-800 mb-6 text-center">
+              AI Bozorining O'sishi (2024-2030)
+            </h3>
+            <div class="bg-gray-50 rounded-lg p-8 flex items-center justify-center">
+              <div class="text-center">
+                <div class="text-6xl font-bold text-teal-600 mb-4">$1.77T</div>
+                <p class="text-gray-600 text-lg">2032-yilga kelib bozor hajmi $1,771.62 milliard dollarga yetishi kutilmoqda</p>
+                <p class="text-teal-600 font-medium mt-2">
+                  <a href="https://www.fortunebusinessinsights.com/industry-reports/artificial-intelligence-market-100114" class="citation">
+                    CAGR: 29.2% (2025-2032)
+                  </a>
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- CPM Comparison Chart -->
+          <div class="chart-container">
+            <h3 class="font-display text-2xl font-semibold text-gray-800 mb-6 text-center">
+              YouTube Nishalari bo'yicha CPM Taqqoslash (2025)
+            </h3>
+            <div class="overflow-x-auto">
+              <table class="w-full">
+                <thead>
+                  <tr class="bg-gray-50">
+                    <th class="text-left p-4 font-semibold text-gray-800">Nisha</th>
+                    <th class="text-center p-4 font-semibold text-gray-800">O'rtacha CPM</th>
+                    <th class="text-left p-4 font-semibold text-gray-800">Tahlil</th>
+                  </tr>
+                </thead>
+                <tbody class="bg-white">
+                  <tr class="border-b">
+                    <td class="p-4 font-medium text-gray-800">Finance & Investing</td>
+                    <td class="p-4 text-center font-bold text-teal-600">$15 - $50</td>
+                    <td class="p-4 text-gray-600">Eng yuqori CPM darajasiga ega</td>
+                  </tr>
+                  <tr class="border-b bg-gray-50">
+                    <td class="p-4 font-medium text-gray-800">AI & Automation Tutorials</td>
+                    <td class="p-4 text-center font-bold text-teal-600">$12 - $22</td>
+                    <td class="p-4 text-gray-600">Texnologiya va AI nishasi ham yuqori CPM darajasiga ega</td>
+                  </tr>
+                  <tr class="border-b">
+                    <td class="p-4 font-medium text-gray-800">Educational Videos</td>
+                    <td class="p-4 text-center font-bold text-green-600">$10 - $25</td>
+                    <td class="p-4 text-gray-600">Ta'limiy videolar ham yuqori CPM ga ega</td>
+                  </tr>
+                  <tr class="border-b bg-gray-50">
+                    <td class="p-4 font-medium text-gray-800">Gaming</td>
+                    <td class="p-4 text-center font-bold text-amber-600">$4 - $15</td>
+                    <td class="p-4 text-gray-600">O'yinlar nishasi ommabop bo'lishiga qaramay, CPM darajasi o'rtacha</td>
+                  </tr>
+                  <tr class="border-b">
+                    <td class="p-4 font-medium text-gray-800">Entertainment</td>
+                    <td class="p-4 text-center font-bold text-orange-600">$2 - $8</td>
+                    <td class="p-4 text-gray-600">Ko'ngilochar videolar past CPM darajasiga ega</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <p class="text-sm text-gray-500 mt-4 text-center">
+              Manba: <a href="https://www.lenostube.com/en/youtube-cpm-rpm-rates/" class="citation">LenosTube YouTube CPM Analysis 2025</a>,
+              <a href="https://fliki.ai/blog/youtube-niches" class="citation">Fliki AI YouTube Niches</a>
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- AI Learning Roadmap -->
+      <section id="ai-roadmap" class="py-16">
+        <div class="max-w-6xl mx-auto">
+          <h2 class="font-display text-4xl font-bold text-gray-800 mb-12 text-center">
+            AI O'rganish Yo'l Xaritasi
+          </h2>
+
+          <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+            <!-- Roadmap Diagram -->
+            <div class="bg-white rounded-2xl p-8 shadow-lg border border-gray-200">
+              <h3 class="font-display text-2xl font-semibold text-gray-800 mb-8 text-center">
+                4 Bosqichli Yo'l Xarita
+              </h3>
+
+              <div class="space-y-6">
+                <!-- Step 1 -->
+                <div class="flex items-start space-x-4">
+                  <div class="bg-teal-100 text-teal-600 rounded-full w-12 h-12 flex items-center justify-center font-bold text-xl flex-shrink-0">1</div>
+                  <div>
+                    <h4 class="font-semibold text-gray-800 text-lg mb-2">Fundamentals</h4>
+                    <p class="text-gray-600 text-sm">Python, Prompt Engineering, AI tushunchalari</p>
+                    <span class="text-xs bg-teal-50 text-teal-700 px-2 py-1 rounded">1-2 oy</span>
+                  </div>
+                </div>
+
+                <!-- Step 2 -->
+                <div class="flex items-start space-x-4">
+                  <div class="bg-amber-100 text-amber-600 rounded-full w-12 h-12 flex items-center justify-center font-bold text-xl flex-shrink-0">2</div>
+                  <div>
+                    <h4 class="font-semibold text-gray-800 text-lg mb-2">Tools</h4>
+                    <p class="text-gray-600 text-sm">ChatGPT, MidJourney, Runway, Veo, ElevenLabs</p>
+                    <span class="text-xs bg-amber-50 text-amber-700 px-2 py-1 rounded">1 oy</span>
+                  </div>
+                </div>
+
+                <!-- Step 3 -->
+                <div class="flex items-start space-x-4">
+                  <div class="bg-purple-100 text-purple-600 rounded-full w-12 h-12 flex items-center justify-center font-bold text-xl flex-shrink-0">3</div>
+                  <div>
+                    <h4 class="font-semibold text-gray-800 text-lg mb-2">Projects</h4>
+                    <p class="text-gray-600 text-sm">AI blog / YouTube kanali, AI design freelancing</p>
+                    <span class="text-xs bg-purple-50 text-purple-700 px-2 py-1 rounded">1-2 oy</span>
+                  </div>
+                </div>
+
+                <!-- Step 4 -->
+                <div class="flex items-start space-x-4">
+                  <div class="bg-green-100 text-green-600 rounded-full w-12 h-12 flex items-center justify-center font-bold text-xl flex-shrink-0">4</div>
+                  <div>
+                    <h4 class="font-semibold text-gray-800 text-lg mb-2">Monetizatsiya</h4>
+                    <p class="text-gray-600 text-sm">Reklama, affiliate, kurs, konsalting</p>
+                    <span class="text-xs bg-green-50 text-green-700 px-2 py-1 rounded">1-2 oy</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Detailed Steps -->
+            <div class="space-y-8">
+              <!-- Step 1 Details -->
+              <div class="bg-gradient-to-r from-teal-50 to-cyan-50 rounded-xl p-6 border border-teal-200">
+                <h4 class="font-display text-xl font-semibold text-gray-800 mb-4">
+                  <i class="fas fa-code text-teal-600 mr-2"></i>
+                  Bosqich 1: Fundamentals
+                </h4>
+                <ul class="space-y-2 text-gray-700">
+                  <li><i class="fas fa-check text-teal-500 mr-2"></i>Python dasturlash tili</li>
+                  <li><i class="fas fa-check text-teal-500 mr-2"></i>Prompt Engineering san'ati</li>
+                  <li><i class="fas fa-check text-teal-500 mr-2"></i>Umumiy AI tushunchalari</li>
+                  <li><i class="fas fa-check text-teal-500 mr-2"></i>Mashina o'rganishi va generativ AI</li>
+                </ul>
+                <p class="text-sm text-gray-600 mt-4">
+                  <strong>Misol:</strong> "ChatGPT orqali 5 daqiqada matn tahlili" - fundamental bilimlarni amalda qo'llashning oddiy, lekin samarali misoli.
+                </p>
+              </div>
+
+              <!-- Step 2 Details -->
+              <div class="bg-gradient-to-r from-amber-50 to-orange-50 rounded-xl p-6 border border-amber-200">
+                <h4 class="font-display text-xl font-semibold text-gray-800 mb-4">
+                  <i class="fas fa-tools text-amber-600 mr-2"></i>
+                  Bosqich 2: Tools
+                </h4>
+                <div class="grid grid-cols-2 gap-4">
+                  <div>
+                    <p class="font-semibold text-gray-700">ChatGPT</p>
+                    <p class="text-sm text-gray-600">Matn va skript yaratish</p>
+                  </div>
+                  <div>
+                    <p class="font-semibold text-gray-700">MidJourney</p>
+                    <p class="text-sm text-gray-600">Rasm va thumbnail yaratish</p>
+                  </div>
+                  <div>
+                    <p class="font-semibold text-gray-700">Runway/Veo</p>
+                    <p class="text-sm text-gray-600">Video montaj va generatsiya</p>
+                  </div>
+                  <div>
+                    <p class="font-semibold text-gray-700">ElevenLabs</p>
+                    <p class="text-sm text-gray-600">Ovozli narratsiya</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- AI Tools Section -->
+      <section id="ai-tools" class="py-16 bg-white">
+        <div class="max-w-6xl mx-auto">
+          <h2 class="font-display text-4xl font-bold text-gray-800 mb-12 text-center">
+            AI Asboblari va Ularning Vazifalari
+          </h2>
+
+          <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+            <!-- Tool Cards -->
+            <div class="space-y-6">
+              <!-- ChatGPT -->
+              <div class="bg-white rounded-xl p-6 shadow-md border border-gray-200 hover:shadow-lg transition-shadow">
+                <div class="flex items-center space-x-4 mb-4">
+                  <div class="bg-green-100 text-green-600 rounded-lg p-3">
+                    <i class="fas fa-comments text-2xl"></i>
+                  </div>
+                  <div>
+                    <h3 class="font-display text-xl font-semibold text-gray-800">ChatGPT</h3>
+                    <p class="text-gray-600">Matn va Skript Yaratish</p>
+                  </div>
+                </div>
+                <p class="text-gray-700 mb-4">
+                  ChatGPT yordamida siz tez va samarali tarzda video skriptlarini yozishingiz mumkin.
+                  <a href="https://tryaipipeline.com/how-to-make-10000-per-month-on-youtube-without-making-videos/" class="citation">
+                    "The Art of Persuasion" mavzusida 2000 so'zlik skript
+                  </a> yaratish uchun bir necha daqiqa yetarli.
+                </p>
+                <div class="flex flex-wrap gap-2">
+                  <span class="bg-green-50 text-green-700 px-3 py-1 rounded-full text-sm">Skript yozish</span>
+                  <span class="bg-green-50 text-green-700 px-3 py-1 rounded-full text-sm">Sarlavha yaratish</span>
+                  <span class="bg-green-50 text-green-700 px-3 py-1 rounded-full text-sm">Tavsif yozish</span>
+                </div>
+              </div>
+
+              <!-- MidJourney -->
+              <div class="bg-white rounded-xl p-6 shadow-md border border-gray-200 hover:shadow-lg transition-shadow">
+                <div class="flex items-center space-x-4 mb-4">
+                  <div class="bg-purple-100 text-purple-600 rounded-lg p-3">
+                    <i class="fas fa-image text-2xl"></i>
+                  </div>
+                  <div>
+                    <h3 class="font-display text-xl font-semibold text-gray-800">MidJourney</h3>
+                    <p class="text-gray-600">Rasm va Thumbnail Yaratish</p>
+                  </div>
+                </div>
+                <p class="text-gray-700 mb-4">
+                  MidJourney yordamida siz o'z videolaringiz uchun noyob va chiroyli thumbnaillarni yaratishingiz mumkin.
+                  <a href="https://tryaipipeline.com/how-to-make-10000-per-month-on-youtube-without-making-videos/" class="citation">
+                    "DebtBusters" kanali
+                  </a> o'z thumbnaillarini MidJourney yordamida yaratgan.
+                </p>
+                <div class="flex flex-wrap gap-2">
+                  <span class="bg-purple-50 text-purple-700 px-3 py-1 rounded-full text-sm">Thumbnail yaratish</span>
+                  <span class="bg-purple-50 text-purple-700 px-3 py-1 rounded-full text-sm">Vizual brend</span>
+                  <span class="bg-purple-50 text-purple-700 px-3 py-1 rounded-full text-sm">O'ziga xos uslub</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="space-y-6">
+              <!-- Runway/Veo -->
+              <div class="bg-white rounded-xl p-6 shadow-md border border-gray-200 hover:shadow-lg transition-shadow">
+                <div class="flex items-center space-x-4 mb-4">
+                  <div class="bg-blue-100 text-blue-600 rounded-lg p-3">
+                    <i class="fas fa-video text-2xl"></i>
+                  </div>
+                  <div>
+                    <h3 class="font-display text-xl font-semibold text-gray-800">Runway/Veo</h3>
+                    <p class="text-gray-600">Video Montaj va Generatsiya</p>
+                  </div>
+                </div>
+                <p class="text-gray-700 mb-4">
+                  Runway va Veo kabi AI vositalari video montaj va generatsiya jarayonini ancha soddalashtiradi.
+                  <a href="https://tryaipipeline.com/how-to-make-10000-per-month-on-youtube-without-making-videos/" class="citation">
+                    Pictory kabi asbobga skriptingizni yuklasangiz
+                  </a>, u avtomatik tarzda skriptga mos keladigan videolarni tanlaydi.
+                </p>
+                <div class="flex flex-wrap gap-2">
+                  <span class="bg-blue-50 text-blue-700 px-3 py-1 rounded-full text-sm">Video montaj</span>
+                  <span class="bg-blue-50 text-blue-700 px-3 py-1 rounded-full text-sm">Stock video tanlash</span>
+                  <span class="bg-blue-50 text-blue-700 px-3 py-1 rounded-full text-sm">Effektlar qo'shish</span>
+                </div>
+              </div>
+
+              <!-- ElevenLabs -->
+              <div class="bg-white rounded-xl p-6 shadow-md border border-gray-200 hover:shadow-lg transition-shadow">
+                <div class="flex items-center space-x-4 mb-4">
+                  <div class="bg-orange-100 text-orange-600 rounded-lg p-3">
+                    <i class="fas fa-microphone text-2xl"></i>
+                  </div>
+                  <div>
+                    <h3 class="font-display text-xl font-semibold text-gray-800">ElevenLabs</h3>
+                    <p class="text-gray-600">Ovozli Narratsiya</p>
+                  </div>
+                </div>
+                <p class="text-gray-700 mb-4">
+                  ElevenLabs yordamida siz o'z videolaringiz uchun professional ovozli dublyaj yaratishingiz mumkin.
+                  <a href="https://tryaipipeline.com/how-to-make-10000-per-month-on-youtube-without-making-videos/" class="citation">
+                    "Adam" nomli ovoz juda tabiiy va insoniy tinglanadi
+                  </a> va bir necha daqiqa ichunda tayyor bo'ladi.
+                </p>
+                <div class="flex flex-wrap gap-2">
+                  <span class="bg-orange-50 text-orange-700 px-3 py-1 rounded-full text-sm">Ovozli narratsiya</span>
+                  <span class="bg-orange-50 text-orange-700 px-3 py-1 rounded-full text-sm">Tabiiy ovoz</span>
+                  <span class="bg-orange-50 text-orange-700 px-3 py-1 rounded-full text-sm">Ovoz klonlash</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Niche Selection -->
+      <section id="niche-selection" class="py-16">
+        <div class="max-w-6xl mx-auto">
+          <h2 class="font-display text-4xl font-bold text-gray-800 mb-12 text-center">
+            YouTube Nisha Tanlash
+          </h2>
+
+          <div class="highlight-box mb-8">
+            <h3 class="font-display text-2xl font-semibold text-gray-800 mb-4">
+              Eng Yuqori CPM Nishalar
+            </h3>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+              <div class="text-center">
+                <div class="text-3xl font-bold text-teal-600 mb-2">$15 - $50</div>
+                <p class="font-semibold text-gray-800">Finance & Investing</p>
+                <p class="text-sm text-gray-600">Eng yuqori to'lanadigan nisha</p>
+              </div>
+              <div class="text-center">
+                <div class="text-3xl font-bold text-amber-600 mb-2">$15 - $50</div>
+                <p class="font-semibold text-gray-800">Luxury</p>
+                <p class="text-sm text-gray-600">Qimmatbaho tovarlar va xizmatlar</p>
+              </div>
+              <div class="text-center">
+                <div class="text-3xl font-bold text-purple-600 mb-2">$12 - $22</div>
+                <p class="font-semibold text-gray-800">AI & Tech</p>
+                <p class="text-sm text-gray-600">Yangi texnologiyalar va AI vositalari</p>
+              </div>
+            </div>
+          </div>
+
+          <p class="text-gray-700 text-lg leading-relaxed">
+            To'g'ri nishani tanlash muvaffaqiyatli YouTube kanali yaratishning kaliti hisoblanadi.
+            <a href="https://fliki.ai/blog/youtube-niches" class="citation">
+              "DebtBusters" kanali "AI tools" nishasini tanlagan
+            </a>, chunki bu nishada auditoriya mavjud va CPM ham yuqori.
+          </p>
+        </div>
+      </section>
+
+      <!-- Content Formats -->
+      <section id="content-formats" class="py-16 bg-white">
+        <div class="max-w-6xl mx-auto">
+          <h2 class="font-display text-4xl font-bold text-gray-800 mb-12 text-center">
+            Kontent Formatlari
+          </h2>
+
+          <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+            <!-- Faceless Videos -->
+            <div class="bg-gradient-to-br from-teal-50 to-cyan-50 rounded-xl p-8 border border-teal-200">
+              <div class="text-teal-600 text-4xl mb-4">
+                <i class="fas fa-user-secret"></i>
+              </div>
+              <h3 class="font-display text-xl font-semibold text-gray-800 mb-4">Faceless Videos</h3>
+              <p class="text-gray-700 mb-6">
+                <a href="https://tryaipipeline.com/how-to-make-10000-per-month-on-youtube-without-making-videos/" class="citation">
+                  "Faceless" (yuzsiz) videolar
+                </a>
+                juda mashhur bo'lib, ularda kameraga chiqmasdan, faqatgina ovozli narratsiya va stock videolar yordamida videoni yaratish mumkin.
+              </p>
+              <div class="space-y-2">
+                <div class="flex items-center space-x-2">
+                  <i class="fas fa-check text-teal-500"></i>
+                  <span class="text-sm text-gray-600">Kamera shart emas</span>
+                </div>
+                <div class="flex items-center space-x-2">
+                  <i class="fas fa-check text-teal-500"></i>
+                  <span class="text-sm text-gray-600">Tezkor va oson yaratish</span>
+                </div>
+                <div class="flex items-center space-x-2">
+                  <i class="fas fa-check text-teal-500"></i>
+                  <span class="text-sm text-gray-600">Shaxsiy hayot xavfsizi</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Shorts -->
+            <div class="bg-gradient-to-br from-amber-50 to-orange-50 rounded-xl p-8 border border-amber-200">
+              <div class="text-amber-600 text-4xl mb-4">
+                <i class="fas fa-mobile-alt"></i>
+              </div>
+              <h3 class="font-display text-xl font-semibold text-gray-800 mb-4">Shorts</h3>
+              <p class="text-gray-700 mb-6">
+                YouTube Shorts bu 60 soniyagacha bo'lgan qisqa videolar uchun mo'ljallangan formatdir. Siz AI yordamida qisqa va jozibador videolar yaratishingiz mumkin.
+              </p>
+              <div class="space-y-2">
+                <div class="flex items-center space-x-2">
+                  <i class="fas fa-check text-amber-500"></i>
+                  <span class="text-sm text-gray-600">Tez va oson yaratish</span>
+                </div>
+                <div class="flex items-center space-x-2">
+                  <i class="fas fa-check text-amber-500"></i>
+                  <span class="text-sm text-gray-600">Ko'proq ko'rish imkoniyati</span>
+                </div>
+                <div class="flex items-center space-x-2">
+                  <i class="fas fa-check text-amber-500"></i>
+                  <span class="text-sm text-gray-600">Auditoriyani jalb qilish</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Long-form Explainers -->
+            <div class="bg-gradient-to-br from-purple-50 to-pink-50 rounded-xl p-8 border border-purple-200">
+              <div class="text-purple-600 text-4xl mb-4">
+                <i class="fas fa-film"></i>
+              </div>
+              <h3 class="font-display text-xl font-semibold text-gray-800 mb-4">Long-form Explainers</h3>
+              <p class="text-gray-700 mb-6">
+                8 daqiqadan ko'proq bo'lgan va biror mavzuni chuqur va tafsilotli tarzda ochib beradigan videolar. Uzun videolar ko'proq reklama joylashtirish imkonini beradi.
+              </p>
+              <div class="space-y-2">
+                <div class="flex items-center space-x-2">
+                  <i class="fas fa-check text-purple-500"></i>
+                  <span class="text-sm text-gray-600">Chuqur tahlil imkoniyati</span>
+                </div>
+                <div class="flex items-center space-x-2">
+                  <i class="fas fa-check text-purple-500"></i>
+                  <span class="text-sm text-gray-600">Ko'proq reklama imkoniyati</span>
+                </div>
+                <div class="flex items-center space-x-2">
+                  <i class="fas fa-check text-purple-500"></i>
+                  <span class="text-sm text-gray-600">"Watch time" ni oshirish</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Automation Section -->
+      <section id="automation" class="py-16">
+        <div class="max-w-6xl mx-auto">
+          <h2 class="font-display text-4xl font-bold text-gray-800 mb-12 text-center">
+            Avtomatlashtirish: AI Production Flow
+          </h2>
+
+          <div class="bg-white rounded-2xl p-8 shadow-lg border border-gray-200">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+              <!-- Flow Diagram -->
+              <div>
+                <h3 class="font-display text-2xl font-semibold text-gray-800 mb-8 text-center">
+                  AI Ishlab Chiqarish Jarayoni
+                </h3>
+
+                <div class="space-y-6">
+                  <!-- Step 1: ChatGPT -->
+                  <div class="flex items-center space-x-4">
+                    <div class="bg-green-100 text-green-600 rounded-full w-16 h-16 flex items-center justify-center font-bold text-lg">1</div>
+                    <div class="flex-1">
+                      <h4 class="font-semibold text-gray-800">Skript: ChatGPT</h4>
+                      <p class="text-sm text-gray-600">Mavzuni yozib, to'liq va tushunarli skript yaratish</p>
+                    </div>
+                  </div>
+
+                  <div class="flex justify-center">
+                    <i class="fas fa-arrow-down text-gray-400 text-2xl"></i>
+                  </div>
+
+                  <!-- Step 2: ElevenLabs -->
+                  <div class="flex items-center space-x-4">
+                    <div class="bg-orange-100 text-orange-600 rounded-full w-16 h-16 flex items-center justify-center font-bold text-lg">2</div>
+                    <div class="flex-1">
+                      <h4 class="font-semibold text-gray-800">Ovoz: ElevenLabs</h4>
+                      <p class="text-sm text-gray-600">Skriptga tabiiy ovozli narratsiya yaratish</p>
+                    </div>
+                  </div>
+
+                  <div class="flex justify-center">
+                    <i class="fas fa-arrow-down text-gray-400 text-2xl"></i>
+                  </div>
+
+                  <!-- Step 3: Runway/Veo -->
+                  <div class="flex items-center space-x-4">
+                    <div class="bg-blue-100 text-blue-600 rounded-full w-16 h-16 flex items-center justify-center font-bold text-lg">3</div>
+                    <div class="flex-1">
+                      <h4 class="font-semibold text-gray-800">Video: Runway/Veo</h4>
+                      <p class="text-sm text-gray-600">Skriptga mos keladigan videolarni tanlash va montaj qilish</p>
+                    </div>
+                  </div>
+
+                  <div class="flex justify-center">
+                    <i class="fas fa-arrow-down text-gray-400 text-2xl"></i>
+                  </div>
+
+                  <!-- Step 4: MidJourney -->
+                  <div class="flex items-center space-x-4">
+                    <div class="bg-purple-100 text-purple-600 rounded-full w-16 h-16 flex items-center justify-center font-bold text-lg">4</div>
+                    <div class="flex-1">
+                      <h4 class="font-semibold text-gray-800">Thumbnail: MidJourney</h4>
+                      <p class="text-sm text-gray-600">Chiroyli va jozibador thumbnail yaratish</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Process Benefits -->
+              <div class="bg-gradient-to-br from-gray-50 to-gray-100 rounded-xl p-6">
+                <h4 class="font-display text-xl font-semibold text-gray-800 mb-6">
+                  Boshqarishning Afzalliklari
+                </h4>
+
+                <div class="space-y-4">
+                  <div class="flex items-start space-x-3">
+                    <i class="fas fa-clock text-teal-600 mt-1"></i>
+                    <div>
+                      <p class="font-semibold text-gray-800">Vaqt tejash</p>
+                      <p class="text-sm text-gray-600">Har bir qadamni avtomatlashtirish orqali 90% vaqt tejaladi</p>
+                    </div>
+                  </div>
+
+                  <div class="flex items-start space-x-3">
+                    <i class="fas fa-dollar-sign text-teal-600 mt-1"></i>
+                    <div>
+                      <p class="font-semibold text-gray-800">Xarajatlarni kamaytirish</p>
+                      <p class="text-sm text-gray-600">Professional jihozlar va ishchi kuchlari kerak emas</p>
+                    </div>
+                  </div>
+
+                  <div class="flex items-start space-x-3">
+                    <i class="fas fa-sync text-teal-600 mt-1"></i>
+                    <div>
+                      <p class="font-semibold text-gray-800">Samaradorlikni oshirish</p>
+                      <p class="text-sm text-gray-600">Ishlab chiqarish jarayonini tezlashtirish</p>
+                    </div>
+                  </div>
+
+                  <div class="flex items-start space-x-3">
+                    <i class="fas fa-chart-line text-teal-600 mt-1"></i>
+                    <div>
+                      <p class="font-semibold text-gray-800">Rivojlanish imkoniyati</p>
+                      <p class="text-sm text-gray-600">Bir nechta kanallarni bir vaqtda boshqarish</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 3-Month Roadmap -->
+      <section id="roadmap-3months" class="py-16">
+        <div class="max-w-6xl mx-auto">
+          <h2 class="font-display text-4xl font-bold text-gray-800 mb-12 text-center">
+            $10,000 Yo'l Xaritasi (3 Oy)
+          </h2>
+
+          <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+            <!-- Month 1 -->
+            <div class="bg-gradient-to-br from-teal-50 to-cyan-50 rounded-xl p-8 border border-teal-200">
+              <div class="text-center mb-6">
+                <div class="bg-teal-100 text-teal-600 rounded-full w-16 h-16 flex items-center justify-center font-bold text-2xl mx-auto mb-4">1</div>
+                <h3 class="font-display text-xl font-semibold text-gray-800">Oy 1</h3>
+                <p class="text-gray-600">AI Pipeline Testi</p>
+              </div>
+
+              <ul class="space-y-3">
+                <li class="flex items-center space-x-2">
+                  <i class="fas fa-video text-teal-500"></i>
+                  <span class="text-gray-700">30 ta video yaratish</span>
+                </li>
+                <li class="flex items-center space-x-2">
+                  <i class="fas fa-cogs text-teal-500"></i>
+                  <span class="text-gray-700">AI pipeline sinab ko'rish</span>
+                </li>
+                <li class="flex items-center space-x-2">
+                  <i class="fas fa-cog text-teal-500"></i>
+                  <span class="text-gray-700">Kanal sozlash</span>
+                </li>
+                <li class="flex items-center space-x-2">
+                  <i class="fas fa-chart-line text-teal-500"></i>
+                  <span class="text-gray-700">Jarayonni takomillashtirish</span>
+                </li>
+              </ul>
+
+              <div class="mt-6 p-4 bg-white rounded-lg border border-teal-200">
+                <p class="text-sm text-gray-600 text-center">
+                  <strong>Maqsad:</strong> AI pipeline'ni sinab ko'rish va kanalni sozlash
+                </p>
+              </div>
+            </div>
+
+            <!-- Month 2 -->
+            <div class="bg-gradient-to-br from-amber-50 to-orange-50 rounded-xl p-8 border border-amber-200">
+              <div class="text-center mb-6">
+                <div class="bg-amber-100 text-amber-600 rounded-full w-16 h-16 flex items-center justify-center font-bold text-2xl mx-auto mb-4">2</div>
+                <h3 class="font-display text-xl font-semibold text-gray-800">Oy 2</h3>
+                <p class="text-gray-600">Analitika va O'sish</p>
+              </div>
+
+              <ul class="space-y-3">
+                <li class="flex items-center space-x-2">
+                  <i class="fas fa-chart-bar text-amber-500"></i>
+                  <span class="text-gray-700">YouTube Analytics tahlili</span>
+                </li>
+                <li class="flex items-center space-x-2">
+                  <i class="fas fa-search text-amber-500"></i>
+                  <span class="text-gray-700">SEO optimizatsiyasi</span>
+                </li>
+                <li class="flex items-center space-x-2">
+                  <i class="fas fa-fire text-amber-500"></i>
+                  <span class="text-gray-700">CPM yuqori videolarni ko'paytirish</span>
+                </li>
+                <li class="flex items-center space-x-2">
+                  <i class="fas fa-users text-amber-500"></i>
+                  <span class="text-gray-700">Obunachilarni oshirish</span>
+                </li>
+              </ul>
+
+              <div class="mt-6 p-4 bg-white rounded-lg border border-amber-200">
+                <p class="text-sm text-gray-600 text-center">
+                  <strong>Maqsad:</strong> Kanal o'sishini ta'minlash va kontent strategiyasini takomillashtirish
+                </p>
+              </div>
+            </div>
+
+            <!-- Month 3 -->
+            <div class="bg-gradient-to-br from-green-50 to-emerald-50 rounded-xl p-8 border border-green-200">
+              <div class="text-center mb-6">
+                <div class="bg-green-100 text-green-600 rounded-full w-16 h-16 flex items-center justify-center font-bold text-2xl mx-auto mb-4">3</div>
+                <h3 class="font-display text-xl font-semibold text-gray-800">Oy 3</h3>
+                <p class="text-gray-600">Monetizatsiya</p>
+              </div>
+
+              <ul class="space-y-3">
+                <li class="flex items-center space-x-2">
+                  <i class="fas fa-dollar-sign text-green-500"></i>
+                  <span class="text-gray-700">YouTube Partner Program</span>
+                </li>
+                <li class="flex items-center space-x-2">
+                  <i class="fas fa-link text-green-500"></i>
+                  <span class="text-gray-700">Affiliate marketing</span>
+                </li>
+                <li class="flex items-center space-x-2">
+                  <i class="fas fa-graduation-cap text-green-500"></i>
+                  <span class="text-gray-700">O'z kursingizni yaratish</span>
+                </li>
+                <li class="flex items-center space-x-2">
+                  <i class="fas fa-handshake text-green-500"></i>
+                  <span class="text-gray-700">Konsalting xizmatlari</span>
+                </li>
+              </ul>
+
+              <div class="mt-6 p-4 bg-white rounded-lg border border-green-200">
+                <p class="text-sm text-gray-600 text-center">
+                  <strong>Maqsad:</strong> $10,000 daromadga erishish
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Revenue Distribution -->
+          <div class="mt-12 bg-white rounded-2xl p-8 shadow-lg border border-gray-200">
+            <h3 class="font-display text-2xl font-semibold text-gray-800 mb-6 text-center">
+              Daromad Manbalarini Taqsimlash
+            </h3>
+            <div class="grid grid-cols-2 lg:grid-cols-4 gap-6">
+              <div class="text-center">
+                <div class="text-3xl font-bold text-teal-600 mb-2">40%</div>
+                <p class="font-semibold text-gray-800">Reklama</p>
+                <p class="text-sm text-gray-600">YouTube AdSense</p>
+              </div>
+              <div class="text-center">
+                <div class="text-3xl font-bold text-amber-600 mb-2">30%</div>
+                <p class="font-semibold text-gray-800">Kurslar</p>
+                <p class="text-sm text-gray-600">O'z kursingizni sotish</p>
+              </div>
+              <div class="text-center">
+                <div class="text-3xl font-bold text-purple-600 mb-2">20%</div>
+                <p class="font-semibold text-gray-800">Affiliate</p>
+                <p class="text-sm text-gray-600">Shartnomalar</p>
+              </div>
+              <div class="text-center">
+                <div class="text-3xl font-bold text-green-600 mb-2">10%</div>
+                <p class="font-semibold text-gray-800">Konsalting</p>
+                <p class="text-sm text-gray-600">Maslahat xizmatlari</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Case Study -->
+      <section id="case-study" class="py-16 bg-white">
+        <div class="max-w-6xl mx-auto">
+          <h2 class="font-display text-4xl font-bold text-gray-800 mb-12 text-center">
+            Real Misol: DebtBusters Kanali
+          </h2>
+
+          <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+            <!-- Case Study Details -->
+            <div class="space-y-8">
+              <!-- Kanal Info -->
+              <div class="bg-gradient-to-r from-teal-50 to-cyan-50 rounded-xl p-6 border border-teal-200">
+                <h3 class="font-display text-xl font-semibold text-gray-800 mb-4">
+                  <i class="fas fa-robot text-teal-600 mr-2"></i>
+                  Kanal: DebtBusters
+                </h3>
+                <p class="text-gray-700 mb-4">
+                  <a href="https://tryaipipeline.com/how-to-make-10000-per-month-on-youtube-without-making-videos/" class="citation">
+                    DebtBusters
+                  </a>
+                  bu AI yordamida yaratilgan muvaffaqiyatli YouTube kanallaridan biri. Ushbu kanal AI asboblari nishasida faoliyat yuritadi.
+                </p>
+                <div class="grid grid-cols-2 gap-4">
+                  <div>
+                    <p class="text-sm text-gray-600">Nisha</p>
+                    <p class="font-semibold text-gray-800">AI Tools</p>
+                  </div>
+                  <div>
+                    <p class="text-sm text-gray-600">Format</p>
+                    <p class="font-semibold text-gray-800">Faceless</p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Revenue Results -->
+              <div class="bg-gradient-to-r from-amber-50 to-orange-50 rounded-xl p-6 border border-amber-200">
+                <h3 class="font-display text-xl font-semibold text-gray-800 mb-4">
+                  <i class="fas fa-chart-line text-amber-600 mr-2"></i>
+                  Daromad: 3 Oyda 0 → $15,000+
+                </h3>
+                <p class="text-gray-700 mb-4">
+                  DebtBusters kanali 3 oy ichida 0 dan boshlab, oyiga 10,000 dollardan ortiq daromad qila boshladi. Ushbu daromad asosan reklama daromadlari, affiliate marketing va o'z kurslarini sotish orqali ta'minlandi.
+                </p>
+                <div class="bg-white rounded-lg p-4">
+                  <p class="text-sm text-gray-600 mb-2">Daromad taqsimoti:</p>
+                  <div class="space-y-1 text-sm">
+                    <div class="flex justify-between">
+                      <span>Reklama daromadi</span>
+                      <span class="font-semibold">40%</span>
+                    </div>
+                    <div class="flex justify-between">
+                      <span>Kurs sotuvi</span>
+                      <span class="font-semibold">30%</span>
+                    </div>
+                    <div class="flex justify-between">
+                      <span>Affiliate marketing</span>
+                      <span class="font-semibold">20%</span>
+                    </div>
+                    <div class="flex justify-between">
+                      <span>Boshqa manbalar</span>
+                      <span class="font-semibold">10%</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- AI Tools Used -->
+              <div class="bg-gradient-to-r from-purple-50 to-pink-50 rounded-xl p-6 border border-purple-200">
+                <h3 class="font-display text-xl font-semibold text-gray-800 mb-4">
+                  <i class="fas fa-cogs text-purple-600 mr-2"></i>
+                  Foydalanilgan AI Asboblari
+                </h3>
+                <div class="grid grid-cols-1 gap-3">
+                  <div class="flex items-center space-x-3">
+                    <i class="fas fa-comments text-green-500"></i>
+                    <span class="text-gray-700">ChatGPT - Skriptlarni yozish</span>
+                  </div>
+                  <div class="flex items-center space-x-3">
+                    <i class="fas fa-microphone text-orange-500"></i>
+                    <span class="text-gray-700">ElevenLabs - Ovozli narratsiya</span>
+                  </div>
+                  <div class="flex items-center space-x-3">
+                    <i class="fas fa-video text-blue-500"></i>
+                    <span class="text-gray-700">Pictory - Video montaj</span>
+                  </div>
+                  <div class="flex items-center space-x-3">
+                    <i class="fas fa-image text-purple-500"></i>
+                    <span class="text-gray-700">Canva/MidJourney - Eskizlar</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Success Visualization -->
+            <div class="bg-white rounded-xl p-6 shadow-md border border-gray-200">
+              <h3 class="font-display text-xl font-semibold text-gray-800 mb-6 text-center">
+                Muvaffaqiyatning Vizualizatsiyasi
+              </h3>
+
+              <div class="chart-container mb-6">
+                <h4 class="font-semibold text-gray-800 mb-4 text-center">Oyma-oy daromad o'sishi</h4>
+                <div class="space-y-3">
+                  <div class="flex items-center justify-between">
+                    <span class="text-sm text-gray-600">1-oy</span>
+                    <div class="flex-1 mx-4">
+                      <div class="bg-gray-200 rounded-full h-3">
+                        <div class="bg-teal-500 h-3 rounded-full" style="width: 5%"></div>
+                      </div>
+                    </div>
+                    <span class="text-sm font-medium text-gray-700">$0 - $500</span>
+                  </div>
+                  <div class="flex items-center justify-between">
+                    <span class="text-sm text-gray-600">2-oy</span>
+                    <div class="flex-1 mx-4">
+                      <div class="bg-gray-200 rounded-full h-3">
+                        <div class="bg-amber-500 h-3 rounded-full" style="width: 40%"></div>
+                      </div>
+                    </div>
+                    <span class="text-sm font-medium text-gray-700">$2,000 - $3,000</span>
+                  </div>
+                  <div class="flex items-center justify-between">
+                    <span class="text-sm text-gray-600">3-oy</span>
+                    <div class="flex-1 mx-4">
+                      <div class="bg-gray-200 rounded-full h-3">
+                        <div class="bg-green-500 h-3 rounded-full" style="width: 100%"></div>
+                      </div>
+                    </div>
+                    <span class="text-sm font-medium text-gray-700">$10,000+</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="highlight-box">
+                <h4 class="font-semibold text-gray-800 mb-2">Muhim Xulosalar</h4>
+                <ul class="space-y-2 text-sm text-gray-700">
+                  <li><i class="fas fa-check text-green-500 mr-2"></i>To'g'ri nishani tanlash muhim</li>
+                  <li><i class="fas fa-check text-green-500 mr-2"></i>AI pipeline yaratish kerak</li>
+                  <li><i class="fas fa-check text-green-500 mr-2"></i>Diversifikatsiya muhim</li>
+                  <li><i class="fas fa-check text-green-500 mr-2"></i>Doimiy rivojlanish zarur</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Conclusion -->
+      <section id="conclusion" class="py-16">
+        <div class="max-w-6xl mx-auto">
+          <h2 class="font-display text-4xl font-bold text-gray-800 mb-12 text-center">
+            Xulosa
+          </h2>
+
+          <div class="highlight-box mb-8">
+            <h3 class="font-display text-2xl font-semibold text-gray-800 mb-4 text-center">
+              AI = Vosita, YouTube = Platforma, Strategiya = Natija
+            </h3>
+            <p class="text-gray-700 text-lg leading-relaxed text-center">
+              AI bu erda asosiy mehnatni o'z zimmasiga oluvchi <strong>vosita</strong>, YouTube esa bu kontentni dunyoga namoyish qiladigan <strong>platforma</strong>, va to'g'ri strategiya esa muvaffaqiyatli <strong>natijaga</strong> erishishning kaliti hisoblanadi.
+            </p>
+          </div>
+
+          <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12">
+            <div class="bg-white rounded-xl p-8 shadow-md border border-gray-200">
+              <h4 class="font-display text-xl font-semibold text-gray-800 mb-4">
+                <i class="fas fa-graduation-cap text-teal-600 mr-2"></i>
+                AI'ni O'rganish
+              </h4>
+              <p class="text-gray-700 mb-4">
+                AI'ni 0 dan o'rganish uchun 6 oy vaqt ajratish mumkin, bu fundamental bilimlarni o'zlashtirish va AI asboblarini o'rganish uchun yetarli vaqt.
+              </p>
+              <div class="flex items-center space-x-4">
+                <div class="bg-teal-100 text-teal-600 rounded-full w-12 h-12 flex items-center justify-center font-bold">6</div>
+                <span class="text-gray-700">Oy - AI o'rganish</span>
+              </div>
+            </div>
+
+            <div class="bg-white rounded-xl p-8 shadow-md border border-gray-200">
+              <h4 class="font-display text-xl font-semibold text-gray-800 mb-4">
+                <i class="fas fa-dollar-sign text-amber-600 mr-2"></i>
+                Daromadga Chiqish
+              </h4>
+              <p class="text-gray-700 mb-4">
+                $10,000 daromadga chiqish uchun esa atigi 3 oy yetarli. Bu 3 oy ichida AI pipeline'ingizni sozlab, kanalingizni ochib, auditoriyangizni yaratib, va daromad manbalarini diversifikatsiya qilishingiz mumkin.
+              </p>
+              <div class="flex items-center space-x-4">
+                <div class="bg-amber-100 text-amber-600 rounded-full w-12 h-12 flex items-center justify-center font-bold">3</div>
+                <span class="text-gray-700">Oy - $10,000 daromad</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="bg-gradient-to-r from-teal-600 to-cyan-600 rounded-2xl p-8 text-white text-center">
+            <h4 class="font-display text-2xl font-semibold mb-4">
+              Motivatsion Quote
+            </h4>
+            <blockquote class="text-2xl italic font-light mb-4">
+              "AI is not replacing you. Someone using AI will."
+            </blockquote>
+            <p class="text-lg">
+              (AI sizni almashtirmayapti. AI'dan foydalanayotgan odam sizni almashtiradi.)
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Footer -->
+      <footer class="py-12 bg-gray-800 text-white">
+        <div class="max-w-6xl mx-auto text-center">
+          <p class="text-lg mb-4">
+            AI va YouTube orqali daromad olishning amaliy yo'llarini o'rganish va amaliyotga tatbiq etishga undamoq!
+          </p>
+          <div class="flex justify-center space-x-6 text-sm">
+            <a href="https://www.fortunebusinessinsights.com/industry-reports/artificial-intelligence-market-100114" class="text-gray-300 hover:text-white transition-colors">
+              Fortune Business Insights
+            </a>
+            <a href="https://www.lenostube.com/en/youtube-cpm-rpm-rates/" class="text-gray-300 hover:text-white transition-colors">
+              LenosTube CPM Analysis
+            </a>
+            <a href="https://tryaipipeline.com/how-to-make-10000-per-month-on-youtube-without-making-videos/" class="text-gray-300 hover:text-white transition-colors">
+              AI Pipeline Case Study
+            </a>
+          </div>
+        </div>
+      </footer>
+    </main>
+
+    <script>
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Highlight active section in TOC
+        const sections = document.querySelectorAll('section[id]');
+        const tocLinks = document.querySelectorAll('.toc-fixed a[href^="#"]');
+
+        function updateActiveSection() {
+            let currentSection = '';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                if (window.pageYOffset >= sectionTop - 100) {
+                    currentSection = section.getAttribute('id');
+                }
+            });
+
+            tocLinks.forEach(link => {
+                link.classList.remove('bg-teal-100', 'text-teal-900');
+                if (link.getAttribute('href') === '#' + currentSection) {
+                    link.classList.add('bg-teal-100', 'text-teal-900');
+                }
+            });
+        }
+
+        window.addEventListener('scroll', updateActiveSection);
+        updateActiveSection(); // Initial call
+    </script>
+  </body>
+
+</html>
+<!DOCTYPE html><html lang="uz"><head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>AI’dan YouTube orqali $10,000 gacha daromad</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&amp;family=Inter:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+    <style>
+        :root {
+            --primary: #1f2937;
+            --secondary: #f59e0b;
+            --accent: #0f766e;
+            --neutral: #f3f4f6;
+            --base: #ffffff;
+        }
+        
+        .font-display { font-family: 'Playfair Display', serif; }
+        .font-body { font-family: 'Inter', sans-serif; }
+        
+        .hero-gradient {
+            background: linear-gradient(135deg, #0f766e 0%, #1f2937 100%);
+        }
+        
+        .text-shadow {
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        
+        .glass-effect {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        
+        .toc-fixed {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            width: 280px;
+            max-height: calc(100vh - 40px);
+            overflow-y: auto;
+            z-index: 50;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        
+        .main-content {
+            margin-left: 320px;
+            padding-right: 40px;
+        }
+        
+        @media (max-width: 1280px) {
+            .toc-fixed {
+                position: relative;
+                width: 100%;
+                margin-bottom: 20px;
+            }
+            .main-content {
+                margin-left: 0;
+                padding-right: 20px;
+            }
+        }
+        
+        .bento-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            grid-template-rows: auto auto;
+            gap: 20px;
+            height: 60vh;
+        }
+        
+        .bento-item-1 {
+            grid-column: 1 / 2;
+            grid-row: 1 / 3;
+        }
+        
+        .bento-item-2 {
+            grid-column: 2 / 3;
+            grid-row: 1 / 2;
+        }
+        
+        .bento-item-3 {
+            grid-column: 2 / 3;
+            grid-row: 2 / 3;
+        }
+        
+        .chart-container {
+            background: white;
+            border-radius: 12px;
+            padding: 24px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+            border: 1px solid #e5e7eb;
+        }
+        
+        .citation {
+            color: #0f766e;
+            font-weight: 500;
+            text-decoration: none;
+            border-bottom: 1px dotted #0f766e;
+        }
+        
+        .citation:hover {
+            background-color: #f0fdfa;
+        }
+        
+        .highlight-box {
+            background: linear-gradient(135deg, #f0fdfa 0%, #ecfdf5 100%);
+            border-left: 4px solid #0f766e;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 20px 0;
+        }
+        
+        @media (max-width: 768px) {
+            .toc-fixed {
+                display: none;
+            }
+            
+            .main-content {
+                margin-left: 0;
+                padding: 0 20px;
+            }
+            
+            .bento-grid {
+                grid-template-columns: 1fr;
+                grid-template-rows: auto;
+                height: auto;
+            }
+            
+            .bento-item-1,
+            .bento-item-2,
+            .bento-item-3 {
+                grid-column: 1;
+                grid-row: auto;
+            }
+            
+            .hero-gradient .font-display.text-5xl {
+                font-size: 2.5rem;
+                line-height: 1.2;
+            }
+            
+            .hero-gradient .text-xl {
+                font-size: 1rem;
+            }
+            
+            .hero-gradient img {
+                height: 12rem;
+            }
+            
+            .hero-gradient .glass-effect {
+                padding: 1rem;
+            }
+        }
+    </style>
+  </head>
+
+  <body class="font-body bg-gray-50 text-gray-900">
+    <!-- Table of Contents -->
+    <nav class="toc-fixed">
+      <div class="p-6">
+        <h3 class="font-display font-semibold text-lg text-gray-800 mb-4">Mundarija</h3>
+        <ul class="space-y-2 text-sm">
+          <li>
+            <a href="#intro" class="block py-2 px-3 rounded-lg hover:bg-teal-50 text-teal-800 hover:text-teal-900 transition-colors">1. Kirish</a>
+          </li>
+          <li>
+            <a href="#problem" class="block py-2 px-3 rounded-lg hover:bg-teal-50 text-teal-800 hover:text-teal-900 transition-colors">2. Muammo</a>
+          </li>
+          <li>
+            <a href="#why-ai-youtube" class="block py-2 px-3 rounded-lg hover:bg-teal-50 text-teal-800 hover:text-teal-900 transition-colors">3. Nega AI + YouTube?</a>
+          </li>
+          <li>
+            <a href="#ai-roadmap" class="block py-2 px-3 rounded-lg hover:bg-teal-50 text-teal-800 hover:text-teal-900 transition-colors">4. AI O&#39;rganish Yo&#39;l Xaritasi</a>
+          </li>
+          <li>
+            <a href="#ai-tools" class="block py-2 px-3 rounded-lg hover:bg-teal-50 text-teal-800 hover:text-teal-900 transition-colors">5. AI Asboblari</a>
+          </li>
+          <li>
+            <a href="#niche-selection" class="block py-2 px-3 rounded-lg hover:bg-teal-50 text-teal-800 hover:text-teal-900 transition-colors">6. Nisha Tanlash</a>
+          </li>
+          <li>
+            <a href="#content-formats" class="block py-2 px-3 rounded-lg hover:bg-teal-50 text-teal-800 hover:text-teal-900 transition-colors">7. Kontent Formatlari</a>
+          </li>
+          <li>
+            <a href="#automation" class="block py-2 px-3 rounded-lg hover:bg-teal-50 text-teal-800 hover:text-teal-900 transition-colors">8. Avtomatlashtirish</a>
+          </li>
+          <li>
+            <a href="#roadmap-3months" class="block py-2 px-3 rounded-lg hover:bg-teal-50 text-teal-800 hover:text-teal-900 transition-colors">9. 3 Oy Yo&#39;l Xaritasi</a>
+          </li>
+          <li>
+            <a href="#case-study" class="block py-2 px-3 rounded-lg hover:bg-teal-50 text-teal-800 hover:text-teal-900 transition-colors">10. Real Misol</a>
+          </li>
+          <li>
+            <a href="#conclusion" class="block py-2 px-3 rounded-lg hover:bg-teal-50 text-teal-800 hover:text-teal-900 transition-colors">11. Xulosa</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="main-content">
+      <!-- Hero Section with Bento Layout -->
+      <section id="intro" class="py-16">
+        <div class="bento-grid">
+          <!-- Main Hero Card -->
+          <div class="bento-item-1 hero-gradient rounded-2xl p-8 flex flex-col justify-center relative overflow-hidden">
+            <div class="absolute inset-0 opacity-20">
+              <img src="https://kimi-web-img.moonshot.cn/img/images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/75cc60dce76cf0d4bd724572a4597acd808ac769.jpg" alt="AI robot working on laptop" class="w-full h-full object-cover" size="large" aspect="wide" color="blue" style="photo" query="AI robot laptop" referrerpolicy="no-referrer" data-modified="1" data-score="0.00"/>
+            </div>
+            <div class="relative z-10">
+              <h1 class="font-display text-5xl font-bold text-white mb-6 text-shadow italic leading-tight">
+                AI&#39;dan YouTube orqali
+                <span class="block text-amber-300">$10,000 gacha daromad</span>
+              </h1>
+              <p class="text-xl text-gray-200 mb-8 max-w-2xl">
+                &#34;AI — faqat texnologiya emas, balki yangi iqtisodiy imkoniyat&#34;
+              </p>
+              <div class="flex items-center space-x-4">
+                <div class="glass-effect rounded-lg px-4 py-2">
+                  <span class="text-white font-medium">6 oy - AI o&#39;rganish</span>
+                </div>
+                <div class="glass-effect rounded-lg px-4 py-2">
+                  <span class="text-white font-medium">3 oy - $10,000 daromad</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Stats Card -->
+          <div class="bento-item-2 bg-white rounded-2xl p-6 shadow-lg border border-gray-200">
+            <h3 class="font-display text-xl font-semibold text-gray-800 mb-4">Statistik Ma&#39;lumot</h3>
+            <div class="space-y-4">
+              <div class="flex justify-between items-center">
+                <span class="text-gray-600">AI bozori 2024</span>
+                <span class="font-semibold text-teal-700">$233.46B</span>
+              </div>
+              <div class="flex justify-between items-center">
+                <span class="text-gray-600">Yoshlarni 70% AI biladi</span>
+                <span class="font-semibold text-amber-600">10% daromad oladi</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Strategy Card -->
+          <div class="bento-item-3 bg-gradient-to-br from-amber-50 to-orange-50 rounded-2xl p-6 border border-amber-200">
+            <h3 class="font-display text-lg font-semibold text-gray-800 mb-3">
+              <i class="fas fa-robot text-amber-600 mr-2"></i>
+              &#34;Faceless&#34; Kanal Strategiyasi
+            </h3>
+            <p class="text-gray-700 text-sm">
+              Kameraga chiqmasdan, professional jihozlarsiz va minimal sarmoya bilan ishlaydigan &#34;faceless&#34; kanal strategiyasi.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Problem Section -->
+      <section id="problem" class="py-16">
+        <div class="max-w-6xl mx-auto">
+          <h2 class="font-display text-4xl font-bold text-gray-800 mb-12 text-center">
+            Muammo: Bilimni Pulga Aylantira Olmayotgan Yoshlar
+          </h2>
+
+          <div class="highlight-box">
+            <h3 class="font-display text-2xl font-semibold text-gray-800 mb-4">
+              Statistik Muammo
+            </h3>
+            <p class="text-gray-700 text-lg leading-relaxed mb-6">
+              Bugungi kunda yoshlar orasida keng tarqalgan muammolardan biri o&#39;zlashtirilgan bilimlarni amalda qo&#39;llay olmaslik va ularni moliyaviy daromadga aylantira olmaslikdir. Ko&#39;plab yoshlar AI va kontent yaratish sohasida ma&#39;lum darajada bilimga ega bo&#39;lishsa-da, ular o&#39;z bilimlarini samarali ishlatish yo&#39;lini topolmay qolishmoqda.
+            </p>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mt-8">
+              <div class="bg-white rounded-lg p-6 shadow-md border border-gray-200">
+                <div class="text-center">
+                  <div class="text-4xl font-bold text-teal-600 mb-2">70%</div>
+                  <p class="text-gray-600">Yoshlarning AI va kontent yaratish bilan qiziqishadi</p>
+                </div>
+              </div>
+              <div class="bg-white rounded-lg p-6 shadow-md border border-gray-200">
+                <div class="text-center">
+                  <div class="text-4xl font-bold text-amber-600 mb-2">10%</div>
+                  <p class="text-gray-600">Gina daromad qila oladi</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <p class="text-gray-700 text-lg leading-relaxed mt-8">
+            Bu katta farq yoshlarning bilim va amaliyot o&#39;rtasidagi bo&#39;shliqni ko&#39;rsatadi. Ular nima qilishni bilishsa-da, bunga qanday erishishni bilmaydilar. Ushbu prezentatsiyaning maqsadi shu bo&#39;shliqni to&#39;ldirish va yoshlarga o&#39;z bilimlarini pulga aylantirishning aniq yo&#39;llarini ko&#39;rsatishdir.
+          </p>
+        </div>
+      </section>
+
+      <!-- Why AI + YouTube Section -->
+      <section id="why-ai-youtube" class="py-16 bg-white">
+        <div class="max-w-6xl mx-auto">
+          <h2 class="font-display text-4xl font-bold text-gray-800 mb-12 text-center">
+            Nega AI + YouTube?
+          </h2>
+
+          <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-12">
+            <div class="bg-gradient-to-br from-teal-50 to-cyan-50 rounded-xl p-8 border border-teal-200">
+              <div class="text-teal-600 text-4xl mb-4">
+                <i class="fas fa-chart-line"></i>
+              </div>
+              <h3 class="font-display text-xl font-semibold text-gray-800 mb-4">O&#39;sayotgan AI Bozori</h3>
+              <p class="text-gray-700">AI bozori 2025-yilga kelib <a href="https://www.fortunebusinessinsights.com/industry-reports/artificial-intelligence-market-100114" class="citation">$294.16 milliard dollarga</a> yetishi kutilmoqda.</p>
+            </div>
+
+            <div class="bg-gradient-to-br from-amber-50 to-orange-50 rounded-xl p-8 border border-amber-200">
+              <div class="text-amber-600 text-4xl mb-4">
+                <i class="fas fa-dollar-sign"></i>
+              </div>
+              <h3 class="font-display text-xl font-semibold text-gray-800 mb-4">Yuqori CPM</h3>
+              <p class="text-gray-700">Yuqori to&#39;lanadigan nishalarda CPM <a href="https://www.lenostube.com/en/youtube-cpm-rpm-rates/" class="citation">$15 dan $50 gacha</a> bo&#39;lishi mumkin.</p>
+            </div>
+
+            <div class="bg-gradient-to-br from-purple-50 to-pink-50 rounded-xl p-8 border border-purple-200">
+              <div class="text-purple-600 text-4xl mb-4">
+                <i class="fas fa-play"></i>
+              </div>
+              <h3 class="font-display text-xl font-semibold text-gray-800 mb-4">Oson Kirish</h3>
+              <p class="text-gray-700">Kamera va professional jihozlarsiz, faqat AI vositalar yordamida ishlash mumkin.</p>
+            </div>
+          </div>
+
+          <!-- AI Market Growth Chart -->
+          <div class="chart-container mb-12">
+            <h3 class="font-display text-2xl font-semibold text-gray-800 mb-6 text-center">
+              AI Bozorining O&#39;sishi (2024-2030)
+            </h3>
+            <div class="bg-gray-50 rounded-lg p-8 flex items-center justify-center">
+              <div class="text-center">
+                <div class="text-6xl font-bold text-teal-600 mb-4">$1.77T</div>
+                <p class="text-gray-600 text-lg">2032-yilga kelib bozor hajmi $1,771.62 milliard dollarga yetishi kutilmoqda</p>
+                <p class="text-teal-600 font-medium mt-2">
+                  <a href="https://www.fortunebusinessinsights.com/industry-reports/artificial-intelligence-market-100114" class="citation">
+                    CAGR: 29.2% (2025-2032)
+                  </a>
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- CPM Comparison Chart -->
+          <div class="chart-container">
+            <h3 class="font-display text-2xl font-semibold text-gray-800 mb-6 text-center">
+              YouTube Nishalari bo&#39;yicha CPM Taqqoslash (2025)
+            </h3>
+            <div class="overflow-x-auto">
+              <table class="w-full">
+                <thead>
+                  <tr class="bg-gray-50">
+                    <th class="text-left p-4 font-semibold text-gray-800">Nisha</th>
+                    <th class="text-center p-4 font-semibold text-gray-800">O&#39;rtacha CPM</th>
+                    <th class="text-left p-4 font-semibold text-gray-800">Tahlil</th>
+                  </tr>
+                </thead>
+                <tbody class="bg-white">
+                  <tr class="border-b">
+                    <td class="p-4 font-medium text-gray-800">Finance &amp; Investing</td>
+                    <td class="p-4 text-center font-bold text-teal-600">$15 - $50</td>
+                    <td class="p-4 text-gray-600">Eng yuqori CPM darajasiga ega</td>
+                  </tr>
+                  <tr class="border-b bg-gray-50">
+                    <td class="p-4 font-medium text-gray-800">AI &amp; Automation Tutorials</td>
+                    <td class="p-4 text-center font-bold text-teal-600">$12 - $22</td>
+                    <td class="p-4 text-gray-600">Texnologiya va AI nishasi ham yuqori CPM darajasiga ega</td>
+                  </tr>
+                  <tr class="border-b">
+                    <td class="p-4 font-medium text-gray-800">Educational Videos</td>
+                    <td class="p-4 text-center font-bold text-green-600">$10 - $25</td>
+                    <td class="p-4 text-gray-600">Ta&#39;limiy videolar ham yuqori CPM ga ega</td>
+                  </tr>
+                  <tr class="border-b bg-gray-50">
+                    <td class="p-4 font-medium text-gray-800">Gaming</td>
+                    <td class="p-4 text-center font-bold text-amber-600">$4 - $15</td>
+                    <td class="p-4 text-gray-600">O&#39;yinlar nishasi ommabop bo&#39;lishiga qaramay, CPM darajasi o&#39;rtacha</td>
+                  </tr>
+                  <tr class="border-b">
+                    <td class="p-4 font-medium text-gray-800">Entertainment</td>
+                    <td class="p-4 text-center font-bold text-orange-600">$2 - $8</td>
+                    <td class="p-4 text-gray-600">Ko&#39;ngilochar videolar past CPM darajasiga ega</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <p class="text-sm text-gray-500 mt-4 text-center">
+              Manba: <a href="https://www.lenostube.com/en/youtube-cpm-rpm-rates/" class="citation">LenosTube YouTube CPM Analysis 2025</a>,
+              <a href="https://fliki.ai/blog/youtube-niches" class="citation">Fliki AI YouTube Niches</a>
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- AI Learning Roadmap -->
+      <section id="ai-roadmap" class="py-16">
+        <div class="max-w-6xl mx-auto">
+          <h2 class="font-display text-4xl font-bold text-gray-800 mb-12 text-center">
+            AI O&#39;rganish Yo&#39;l Xaritasi
+          </h2>
+
+          <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+            <!-- Roadmap Diagram -->
+            <div class="bg-white rounded-2xl p-8 shadow-lg border border-gray-200">
+              <h3 class="font-display text-2xl font-semibold text-gray-800 mb-8 text-center">
+                4 Bosqichli Yo&#39;l Xarita
+              </h3>
+
+              <div class="space-y-6">
+                <!-- Step 1 -->
+                <div class="flex items-start space-x-4">
+                  <div class="bg-teal-100 text-teal-600 rounded-full w-12 h-12 flex items-center justify-center font-bold text-xl flex-shrink-0">1</div>
+                  <div>
+                    <h4 class="font-semibold text-gray-800 text-lg mb-2">Fundamentals</h4>
+                    <p class="text-gray-600 text-sm">Python, Prompt Engineering, AI tushunchalari</p>
+                    <span class="text-xs bg-teal-50 text-teal-700 px-2 py-1 rounded">1-2 oy</span>
+                  </div>
+                </div>
+
+                <!-- Step 2 -->
+                <div class="flex items-start space-x-4">
+                  <div class="bg-amber-100 text-amber-600 rounded-full w-12 h-12 flex items-center justify-center font-bold text-xl flex-shrink-0">2</div>
+                  <div>
+                    <h4 class="font-semibold text-gray-800 text-lg mb-2">Tools</h4>
+                    <p class="text-gray-600 text-sm">ChatGPT, MidJourney, Runway, Veo, ElevenLabs</p>
+                    <span class="text-xs bg-amber-50 text-amber-700 px-2 py-1 rounded">1 oy</span>
+                  </div>
+                </div>
+
+                <!-- Step 3 -->
+                <div class="flex items-start space-x-4">
+                  <div class="bg-purple-100 text-purple-600 rounded-full w-12 h-12 flex items-center justify-center font-bold text-xl flex-shrink-0">3</div>
+                  <div>
+                    <h4 class="font-semibold text-gray-800 text-lg mb-2">Projects</h4>
+                    <p class="text-gray-600 text-sm">AI blog / YouTube kanali, AI design freelancing</p>
+                    <span class="text-xs bg-purple-50 text-purple-700 px-2 py-1 rounded">1-2 oy</span>
+                  </div>
+                </div>
+
+                <!-- Step 4 -->
+                <div class="flex items-start space-x-4">
+                  <div class="bg-green-100 text-green-600 rounded-full w-12 h-12 flex items-center justify-center font-bold text-xl flex-shrink-0">4</div>
+                  <div>
+                    <h4 class="font-semibold text-gray-800 text-lg mb-2">Monetizatsiya</h4>
+                    <p class="text-gray-600 text-sm">Reklama, affiliate, kurs, konsalting</p>
+                    <span class="text-xs bg-green-50 text-green-700 px-2 py-1 rounded">1-2 oy</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Detailed Steps -->
+            <div class="space-y-8">
+              <!-- Step 1 Details -->
+              <div class="bg-gradient-to-r from-teal-50 to-cyan-50 rounded-xl p-6 border border-teal-200">
+                <h4 class="font-display text-xl font-semibold text-gray-800 mb-4">
+                  <i class="fas fa-code text-teal-600 mr-2"></i>
+                  Bosqich 1: Fundamentals
+                </h4>
+                <ul class="space-y-2 text-gray-700">
+                  <li><i class="fas fa-check text-teal-500 mr-2"></i>Python dasturlash tili</li>
+                  <li><i class="fas fa-check text-teal-500 mr-2"></i>Prompt Engineering san&#39;ati</li>
+                  <li><i class="fas fa-check text-teal-500 mr-2"></i>Umumiy AI tushunchalari</li>
+                  <li><i class="fas fa-check text-teal-500 mr-2"></i>Mashina o&#39;rganishi va generativ AI</li>
+                </ul>
+                <p class="text-sm text-gray-600 mt-4">
+                  <strong>Misol:</strong> &#34;ChatGPT orqali 5 daqiqada matn tahlili&#34; - fundamental bilimlarni amalda qo&#39;llashning oddiy, lekin samarali misoli.
+                </p>
+              </div>
+
+              <!-- Step 2 Details -->
+              <div class="bg-gradient-to-r from-amber-50 to-orange-50 rounded-xl p-6 border border-amber-200">
+                <h4 class="font-display text-xl font-semibold text-gray-800 mb-4">
+                  <i class="fas fa-tools text-amber-600 mr-2"></i>
+                  Bosqich 2: Tools
+                </h4>
+                <div class="grid grid-cols-2 gap-4">
+                  <div>
+                    <p class="font-semibold text-gray-700">ChatGPT</p>
+                    <p class="text-sm text-gray-600">Matn va skript yaratish</p>
+                  </div>
+                  <div>
+                    <p class="font-semibold text-gray-700">MidJourney</p>
+                    <p class="text-sm text-gray-600">Rasm va thumbnail yaratish</p>
+                  </div>
+                  <div>
+                    <p class="font-semibold text-gray-700">Runway/Veo</p>
+                    <p class="text-sm text-gray-600">Video montaj va generatsiya</p>
+                  </div>
+                  <div>
+                    <p class="font-semibold text-gray-700">ElevenLabs</p>
+                    <p class="text-sm text-gray-600">Ovozli narratsiya</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- AI Tools Section -->
+      <section id="ai-tools" class="py-16 bg-white">
+        <div class="max-w-6xl mx-auto">
+          <h2 class="font-display text-4xl font-bold text-gray-800 mb-12 text-center">
+            AI Asboblari va Ularning Vazifalari
+          </h2>
+
+          <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+            <!-- Tool Cards -->
+            <div class="space-y-6">
+              <!-- ChatGPT -->
+              <div class="bg-white rounded-xl p-6 shadow-md border border-gray-200 hover:shadow-lg transition-shadow">
+                <div class="flex items-center space-x-4 mb-4">
+                  <div class="bg-green-100 text-green-600 rounded-lg p-3">
+                    <i class="fas fa-comments text-2xl"></i>
+                  </div>
+                  <div>
+                    <h3 class="font-display text-xl font-semibold text-gray-800">ChatGPT</h3>
+                    <p class="text-gray-600">Matn va Skript Yaratish</p>
+                  </div>
+                </div>
+                <p class="text-gray-700 mb-4">
+                  ChatGPT yordamida siz tez va samarali tarzda video skriptlarini yozishingiz mumkin.
+                  <a href="https://tryaipipeline.com/how-to-make-10000-per-month-on-youtube-without-making-videos/" class="citation">
+                    &#34;The Art of Persuasion&#34; mavzusida 2000 so&#39;zlik skript
+                  </a> yaratish uchun bir necha daqiqa yetarli.
+                </p>
+                <div class="flex flex-wrap gap-2">
+                  <span class="bg-green-50 text-green-700 px-3 py-1 rounded-full text-sm">Skript yozish</span>
+                  <span class="bg-green-50 text-green-700 px-3 py-1 rounded-full text-sm">Sarlavha yaratish</span>
+                  <span class="bg-green-50 text-green-700 px-3 py-1 rounded-full text-sm">Tavsif yozish</span>
+                </div>
+              </div>
+
+              <!-- MidJourney -->
+              <div class="bg-white rounded-xl p-6 shadow-md border border-gray-200 hover:shadow-lg transition-shadow">
+                <div class="flex items-center space-x-4 mb-4">
+                  <div class="bg-purple-100 text-purple-600 rounded-lg p-3">
+                    <i class="fas fa-image text-2xl"></i>
+                  </div>
+                  <div>
+                    <h3 class="font-display text-xl font-semibold text-gray-800">MidJourney</h3>
+                    <p class="text-gray-600">Rasm va Thumbnail Yaratish</p>
+                  </div>
+                </div>
+                <p class="text-gray-700 mb-4">
+                  MidJourney yordamida siz o&#39;z videolaringiz uchun noyob va chiroyli thumbnaillarni yaratishingiz mumkin.
+                  <a href="https://tryaipipeline.com/how-to-make-10000-per-month-on-youtube-without-making-videos/" class="citation">
+                    &#34;DebtBusters&#34; kanali
+                  </a> o&#39;z thumbnaillarini MidJourney yordamida yaratgan.
+                </p>
+                <div class="flex flex-wrap gap-2">
+                  <span class="bg-purple-50 text-purple-700 px-3 py-1 rounded-full text-sm">Thumbnail yaratish</span>
+                  <span class="bg-purple-50 text-purple-700 px-3 py-1 rounded-full text-sm">Vizual brend</span>
+                  <span class="bg-purple-50 text-purple-700 px-3 py-1 rounded-full text-sm">O&#39;ziga xos uslub</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="space-y-6">
+              <!-- Runway/Veo -->
+              <div class="bg-white rounded-xl p-6 shadow-md border border-gray-200 hover:shadow-lg transition-shadow">
+                <div class="flex items-center space-x-4 mb-4">
+                  <div class="bg-blue-100 text-blue-600 rounded-lg p-3">
+                    <i class="fas fa-video text-2xl"></i>
+                  </div>
+                  <div>
+                    <h3 class="font-display text-xl font-semibold text-gray-800">Runway/Veo</h3>
+                    <p class="text-gray-600">Video Montaj va Generatsiya</p>
+                  </div>
+                </div>
+                <p class="text-gray-700 mb-4">
+                  Runway va Veo kabi AI vositalari video montaj va generatsiya jarayonini ancha soddalashtiradi.
+                  <a href="https://tryaipipeline.com/how-to-make-10000-per-month-on-youtube-without-making-videos/" class="citation">
+                    Pictory kabi asbobga skriptingizni yuklasangiz
+                  </a>, u avtomatik tarzda skriptga mos keladigan videolarni tanlaydi.
+                </p>
+                <div class="flex flex-wrap gap-2">
+                  <span class="bg-blue-50 text-blue-700 px-3 py-1 rounded-full text-sm">Video montaj</span>
+                  <span class="bg-blue-50 text-blue-700 px-3 py-1 rounded-full text-sm">Stock video tanlash</span>
+                  <span class="bg-blue-50 text-blue-700 px-3 py-1 rounded-full text-sm">Effektlar qo&#39;shish</span>
+                </div>
+              </div>
+
+              <!-- ElevenLabs -->
+              <div class="bg-white rounded-xl p-6 shadow-md border border-gray-200 hover:shadow-lg transition-shadow">
+                <div class="flex items-center space-x-4 mb-4">
+                  <div class="bg-orange-100 text-orange-600 rounded-lg p-3">
+                    <i class="fas fa-microphone text-2xl"></i>
+                  </div>
+                  <div>
+                    <h3 class="font-display text-xl font-semibold text-gray-800">ElevenLabs</h3>
+                    <p class="text-gray-600">Ovozli Narratsiya</p>
+                  </div>
+                </div>
+                <p class="text-gray-700 mb-4">
+                  ElevenLabs yordamida siz o&#39;z videolaringiz uchun professional ovozli dublyaj yaratishingiz mumkin.
+                  <a href="https://tryaipipeline.com/how-to-make-10000-per-month-on-youtube-without-making-videos/" class="citation">
+                    &#34;Adam&#34; nomli ovoz juda tabiiy va insoniy tinglanadi
+                  </a> va bir necha daqiqa ichunda tayyor bo&#39;ladi.
+                </p>
+                <div class="flex flex-wrap gap-2">
+                  <span class="bg-orange-50 text-orange-700 px-3 py-1 rounded-full text-sm">Ovozli narratsiya</span>
+                  <span class="bg-orange-50 text-orange-700 px-3 py-1 rounded-full text-sm">Tabiiy ovoz</span>
+                  <span class="bg-orange-50 text-orange-700 px-3 py-1 rounded-full text-sm">Ovoz klonlash</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Niche Selection -->
+      <section id="niche-selection" class="py-16">
+        <div class="max-w-6xl mx-auto">
+          <h2 class="font-display text-4xl font-bold text-gray-800 mb-12 text-center">
+            YouTube Nisha Tanlash
+          </h2>
+
+          <div class="highlight-box mb-8">
+            <h3 class="font-display text-2xl font-semibold text-gray-800 mb-4">
+              Eng Yuqori CPM Nishalar
+            </h3>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+              <div class="text-center">
+                <div class="text-3xl font-bold text-teal-600 mb-2">$15 - $50</div>
+                <p class="font-semibold text-gray-800">Finance &amp; Investing</p>
+                <p class="text-sm text-gray-600">Eng yuqori to&#39;lanadigan nisha</p>
+              </div>
+              <div class="text-center">
+                <div class="text-3xl font-bold text-amber-600 mb-2">$15 - $50</div>
+                <p class="font-semibold text-gray-800">Luxury</p>
+                <p class="text-sm text-gray-600">Qimmatbaho tovarlar va xizmatlar</p>
+              </div>
+              <div class="text-center">
+                <div class="text-3xl font-bold text-purple-600 mb-2">$12 - $22</div>
+                <p class="font-semibold text-gray-800">AI &amp; Tech</p>
+                <p class="text-sm text-gray-600">Yangi texnologiyalar va AI vositalari</p>
+              </div>
+            </div>
+          </div>
+
+          <p class="text-gray-700 text-lg leading-relaxed">
+            To&#39;g&#39;ri nishani tanlash muvaffaqiyatli YouTube kanali yaratishning kaliti hisoblanadi.
+            <a href="https://fliki.ai/blog/youtube-niches" class="citation">
+              &#34;DebtBusters&#34; kanali &#34;AI tools&#34; nishasini tanlagan
+            </a>, chunki bu nishada auditoriya mavjud va CPM ham yuqori.
+          </p>
+        </div>
+      </section>
+
+      <!-- Content Formats -->
+      <section id="content-formats" class="py-16 bg-white">
+        <div class="max-w-6xl mx-auto">
+          <h2 class="font-display text-4xl font-bold text-gray-800 mb-12 text-center">
+            Kontent Formatlari
+          </h2>
+
+          <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+            <!-- Faceless Videos -->
+            <div class="bg-gradient-to-br from-teal-50 to-cyan-50 rounded-xl p-8 border border-teal-200">
+              <div class="text-teal-600 text-4xl mb-4">
+                <i class="fas fa-user-secret"></i>
+              </div>
+              <h3 class="font-display text-xl font-semibold text-gray-800 mb-4">Faceless Videos</h3>
+              <p class="text-gray-700 mb-6">
+                <a href="https://tryaipipeline.com/how-to-make-10000-per-month-on-youtube-without-making-videos/" class="citation">
+                  &#34;Faceless&#34; (yuzsiz) videolar
+                </a>
+                juda mashhur bo&#39;lib, ularda kameraga chiqmasdan, faqatgina ovozli narratsiya va stock videolar yordamida videoni yaratish mumkin.
+              </p>
+              <div class="space-y-2">
+                <div class="flex items-center space-x-2">
+                  <i class="fas fa-check text-teal-500"></i>
+                  <span class="text-sm text-gray-600">Kamera shart emas</span>
+                </div>
+                <div class="flex items-center space-x-2">
+                  <i class="fas fa-check text-teal-500"></i>
+                  <span class="text-sm text-gray-600">Tezkor va oson yaratish</span>
+                </div>
+                <div class="flex items-center space-x-2">
+                  <i class="fas fa-check text-teal-500"></i>
+                  <span class="text-sm text-gray-600">Shaxsiy hayot xavfsizi</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Shorts -->
+            <div class="bg-gradient-to-br from-amber-50 to-orange-50 rounded-xl p-8 border border-amber-200">
+              <div class="text-amber-600 text-4xl mb-4">
+                <i class="fas fa-mobile-alt"></i>
+              </div>
+              <h3 class="font-display text-xl font-semibold text-gray-800 mb-4">Shorts</h3>
+              <p class="text-gray-700 mb-6">
+                YouTube Shorts bu 60 soniyagacha bo&#39;lgan qisqa videolar uchun mo&#39;ljallangan formatdir. Siz AI yordamida qisqa va jozibador videolar yaratishingiz mumkin.
+              </p>
+              <div class="space-y-2">
+                <div class="flex items-center space-x-2">
+                  <i class="fas fa-check text-amber-500"></i>
+                  <span class="text-sm text-gray-600">Tez va oson yaratish</span>
+                </div>
+                <div class="flex items-center space-x-2">
+                  <i class="fas fa-check text-amber-500"></i>
+                  <span class="text-sm text-gray-600">Ko&#39;proq ko&#39;rish imkoniyati</span>
+                </div>
+                <div class="flex items-center space-x-2">
+                  <i class="fas fa-check text-amber-500"></i>
+                  <span class="text-sm text-gray-600">Auditoriyani jalb qilish</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Long-form Explainers -->
+            <div class="bg-gradient-to-br from-purple-50 to-pink-50 rounded-xl p-8 border border-purple-200">
+              <div class="text-purple-600 text-4xl mb-4">
+                <i class="fas fa-film"></i>
+              </div>
+              <h3 class="font-display text-xl font-semibold text-gray-800 mb-4">Long-form Explainers</h3>
+              <p class="text-gray-700 mb-6">
+                8 daqiqadan ko&#39;proq bo&#39;lgan va biror mavzuni chuqur va tafsilotli tarzda ochib beradigan videolar. Uzun videolar ko&#39;proq reklama joylashtirish imkonini beradi.
+              </p>
+              <div class="space-y-2">
+                <div class="flex items-center space-x-2">
+                  <i class="fas fa-check text-purple-500"></i>
+                  <span class="text-sm text-gray-600">Chuqur tahlil imkoniyati</span>
+                </div>
+                <div class="flex items-center space-x-2">
+                  <i class="fas fa-check text-purple-500"></i>
+                  <span class="text-sm text-gray-600">Ko&#39;proq reklama imkoniyati</span>
+                </div>
+                <div class="flex items-center space-x-2">
+                  <i class="fas fa-check text-purple-500"></i>
+                  <span class="text-sm text-gray-600">&#34;Watch time&#34; ni oshirish</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Automation Section -->
+      <section id="automation" class="py-16">
+        <div class="max-w-6xl mx-auto">
+          <h2 class="font-display text-4xl font-bold text-gray-800 mb-12 text-center">
+            Avtomatlashtirish: AI Production Flow
+          </h2>
+
+          <div class="bg-white rounded-2xl p-8 shadow-lg border border-gray-200">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+              <!-- Flow Diagram -->
+              <div>
+                <h3 class="font-display text-2xl font-semibold text-gray-800 mb-8 text-center">
+                  AI Ishlab Chiqarish Jarayoni
+                </h3>
+
+                <div class="space-y-6">
+                  <!-- Step 1: ChatGPT -->
+                  <div class="flex items-center space-x-4">
+                    <div class="bg-green-100 text-green-600 rounded-full w-16 h-16 flex items-center justify-center font-bold text-lg">1</div>
+                    <div class="flex-1">
+                      <h4 class="font-semibold text-gray-800">Skript: ChatGPT</h4>
+                      <p class="text-sm text-gray-600">Mavzuni yozib, to&#39;liq va tushunarli skript yaratish</p>
+                    </div>
+                  </div>
+
+                  <div class="flex justify-center">
+                    <i class="fas fa-arrow-down text-gray-400 text-2xl"></i>
+                  </div>
+
+                  <!-- Step 2: ElevenLabs -->
+                  <div class="flex items-center space-x-4">
+                    <div class="bg-orange-100 text-orange-600 rounded-full w-16 h-16 flex items-center justify-center font-bold text-lg">2</div>
+                    <div class="flex-1">
+                      <h4 class="font-semibold text-gray-800">Ovoz: ElevenLabs</h4>
+                      <p class="text-sm text-gray-600">Skriptga tabiiy ovozli narratsiya yaratish</p>
+                    </div>
+                  </div>
+
+                  <div class="flex justify-center">
+                    <i class="fas fa-arrow-down text-gray-400 text-2xl"></i>
+                  </div>
+
+                  <!-- Step 3: Runway/Veo -->
+                  <div class="flex items-center space-x-4">
+                    <div class="bg-blue-100 text-blue-600 rounded-full w-16 h-16 flex items-center justify-center font-bold text-lg">3</div>
+                    <div class="flex-1">
+                      <h4 class="font-semibold text-gray-800">Video: Runway/Veo</h4>
+                      <p class="text-sm text-gray-600">Skriptga mos keladigan videolarni tanlash va montaj qilish</p>
+                    </div>
+                  </div>
+
+                  <div class="flex justify-center">
+                    <i class="fas fa-arrow-down text-gray-400 text-2xl"></i>
+                  </div>
+
+                  <!-- Step 4: MidJourney -->
+                  <div class="flex items-center space-x-4">
+                    <div class="bg-purple-100 text-purple-600 rounded-full w-16 h-16 flex items-center justify-center font-bold text-lg">4</div>
+                    <div class="flex-1">
+                      <h4 class="font-semibold text-gray-800">Thumbnail: MidJourney</h4>
+                      <p class="text-sm text-gray-600">Chiroyli va jozibador thumbnail yaratish</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Process Benefits -->
+              <div class="bg-gradient-to-br from-gray-50 to-gray-100 rounded-xl p-6">
+                <h4 class="font-display text-xl font-semibold text-gray-800 mb-6">
+                  Boshqarishning Afzalliklari
+                </h4>
+
+                <div class="space-y-4">
+                  <div class="flex items-start space-x-3">
+                    <i class="fas fa-clock text-teal-600 mt-1"></i>
+                    <div>
+                      <p class="font-semibold text-gray-800">Vaqt tejash</p>
+                      <p class="text-sm text-gray-600">Har bir qadamni avtomatlashtirish orqali 90% vaqt tejaladi</p>
+                    </div>
+                  </div>
+
+                  <div class="flex items-start space-x-3">
+                    <i class="fas fa-dollar-sign text-teal-600 mt-1"></i>
+                    <div>
+                      <p class="font-semibold text-gray-800">Xarajatlarni kamaytirish</p>
+                      <p class="text-sm text-gray-600">Professional jihozlar va ishchi kuchlari kerak emas</p>
+                    </div>
+                  </div>
+
+                  <div class="flex items-start space-x-3">
+                    <i class="fas fa-sync text-teal-600 mt-1"></i>
+                    <div>
+                      <p class="font-semibold text-gray-800">Samaradorlikni oshirish</p>
+                      <p class="text-sm text-gray-600">Ishlab chiqarish jarayonini tezlashtirish</p>
+                    </div>
+                  </div>
+
+                  <div class="flex items-start space-x-3">
+                    <i class="fas fa-chart-line text-teal-600 mt-1"></i>
+                    <div>
+                      <p class="font-semibold text-gray-800">Rivojlanish imkoniyati</p>
+                      <p class="text-sm text-gray-600">Bir nechta kanallarni bir vaqtda boshqarish</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 3-Month Roadmap -->
+      <section id="roadmap-3months" class="py-16">
+        <div class="max-w-6xl mx-auto">
+          <h2 class="font-display text-4xl font-bold text-gray-800 mb-12 text-center">
+            $10,000 Yo&#39;l Xaritasi (3 Oy)
+          </h2>
+
+          <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+            <!-- Month 1 -->
+            <div class="bg-gradient-to-br from-teal-50 to-cyan-50 rounded-xl p-8 border border-teal-200">
+              <div class="text-center mb-6">
+                <div class="bg-teal-100 text-teal-600 rounded-full w-16 h-16 flex items-center justify-center font-bold text-2xl mx-auto mb-4">1</div>
+                <h3 class="font-display text-xl font-semibold text-gray-800">Oy 1</h3>
+                <p class="text-gray-600">AI Pipeline Testi</p>
+              </div>
+
+              <ul class="space-y-3">
+                <li class="flex items-center space-x-2">
+                  <i class="fas fa-video text-teal-500"></i>
+                  <span class="text-gray-700">30 ta video yaratish</span>
+                </li>
+                <li class="flex items-center space-x-2">
+                  <i class="fas fa-cogs text-teal-500"></i>
+                  <span class="text-gray-700">AI pipeline sinab ko&#39;rish</span>
+                </li>
+                <li class="flex items-center space-x-2">
+                  <i class="fas fa-cog text-teal-500"></i>
+                  <span class="text-gray-700">Kanal sozlash</span>
+                </li>
+                <li class="flex items-center space-x-2">
+                  <i class="fas fa-chart-line text-teal-500"></i>
+                  <span class="text-gray-700">Jarayonni takomillashtirish</span>
+                </li>
+              </ul>
+
+              <div class="mt-6 p-4 bg-white rounded-lg border border-teal-200">
+                <p class="text-sm text-gray-600 text-center">
+                  <strong>Maqsad:</strong> AI pipeline&#39;ni sinab ko&#39;rish va kanalni sozlash
+                </p>
+              </div>
+            </div>
+
+            <!-- Month 2 -->
+            <div class="bg-gradient-to-br from-amber-50 to-orange-50 rounded-xl p-8 border border-amber-200">
+              <div class="text-center mb-6">
+                <div class="bg-amber-100 text-amber-600 rounded-full w-16 h-16 flex items-center justify-center font-bold text-2xl mx-auto mb-4">2</div>
+                <h3 class="font-display text-xl font-semibold text-gray-800">Oy 2</h3>
+                <p class="text-gray-600">Analitika va O&#39;sish</p>
+              </div>
+
+              <ul class="space-y-3">
+                <li class="flex items-center space-x-2">
+                  <i class="fas fa-chart-bar text-amber-500"></i>
+                  <span class="text-gray-700">YouTube Analytics tahlili</span>
+                </li>
+                <li class="flex items-center space-x-2">
+                  <i class="fas fa-search text-amber-500"></i>
+                  <span class="text-gray-700">SEO optimizatsiyasi</span>
+                </li>
+                <li class="flex items-center space-x-2">
+                  <i class="fas fa-fire text-amber-500"></i>
+                  <span class="text-gray-700">CPM yuqori videolarni ko&#39;paytirish</span>
+                </li>
+                <li class="flex items-center space-x-2">
+                  <i class="fas fa-users text-amber-500"></i>
+                  <span class="text-gray-700">Obunachilarni oshirish</span>
+                </li>
+              </ul>
+
+              <div class="mt-6 p-4 bg-white rounded-lg border border-amber-200">
+                <p class="text-sm text-gray-600 text-center">
+                  <strong>Maqsad:</strong> Kanal o&#39;sishini ta&#39;minlash va kontent strategiyasini takomillashtirish
+                </p>
+              </div>
+            </div>
+
+            <!-- Month 3 -->
+            <div class="bg-gradient-to-br from-green-50 to-emerald-50 rounded-xl p-8 border border-green-200">
+              <div class="text-center mb-6">
+                <div class="bg-green-100 text-green-600 rounded-full w-16 h-16 flex items-center justify-center font-bold text-2xl mx-auto mb-4">3</div>
+                <h3 class="font-display text-xl font-semibold text-gray-800">Oy 3</h3>
+                <p class="text-gray-600">Monetizatsiya</p>
+              </div>
+
+              <ul class="space-y-3">
+                <li class="flex items-center space-x-2">
+                  <i class="fas fa-dollar-sign text-green-500"></i>
+                  <span class="text-gray-700">YouTube Partner Program</span>
+                </li>
+                <li class="flex items-center space-x-2">
+                  <i class="fas fa-link text-green-500"></i>
+                  <span class="text-gray-700">Affiliate marketing</span>
+                </li>
+                <li class="flex items-center space-x-2">
+                  <i class="fas fa-graduation-cap text-green-500"></i>
+                  <span class="text-gray-700">O&#39;z kursingizni yaratish</span>
+                </li>
+                <li class="flex items-center space-x-2">
+                  <i class="fas fa-handshake text-green-500"></i>
+                  <span class="text-gray-700">Konsalting xizmatlari</span>
+                </li>
+              </ul>
+
+              <div class="mt-6 p-4 bg-white rounded-lg border border-green-200">
+                <p class="text-sm text-gray-600 text-center">
+                  <strong>Maqsad:</strong> $10,000 daromadga erishish
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Revenue Distribution -->
+          <div class="mt-12 bg-white rounded-2xl p-8 shadow-lg border border-gray-200">
+            <h3 class="font-display text-2xl font-semibold text-gray-800 mb-6 text-center">
+              Daromad Manbalarini Taqsimlash
+            </h3>
+            <div class="grid grid-cols-2 lg:grid-cols-4 gap-6">
+              <div class="text-center">
+                <div class="text-3xl font-bold text-teal-600 mb-2">40%</div>
+                <p class="font-semibold text-gray-800">Reklama</p>
+                <p class="text-sm text-gray-600">YouTube AdSense</p>
+              </div>
+              <div class="text-center">
+                <div class="text-3xl font-bold text-amber-600 mb-2">30%</div>
+                <p class="font-semibold text-gray-800">Kurslar</p>
+                <p class="text-sm text-gray-600">O&#39;z kursingizni sotish</p>
+              </div>
+              <div class="text-center">
+                <div class="text-3xl font-bold text-purple-600 mb-2">20%</div>
+                <p class="font-semibold text-gray-800">Affiliate</p>
+                <p class="text-sm text-gray-600">Shartnomalar</p>
+              </div>
+              <div class="text-center">
+                <div class="text-3xl font-bold text-green-600 mb-2">10%</div>
+                <p class="font-semibold text-gray-800">Konsalting</p>
+                <p class="text-sm text-gray-600">Maslahat xizmatlari</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Case Study -->
+      <section id="case-study" class="py-16 bg-white">
+        <div class="max-w-6xl mx-auto">
+          <h2 class="font-display text-4xl font-bold text-gray-800 mb-12 text-center">
+            Real Misol: DebtBusters Kanali
+          </h2>
+
+          <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+            <!-- Case Study Details -->
+            <div class="space-y-8">
+              <!-- Kanal Info -->
+              <div class="bg-gradient-to-r from-teal-50 to-cyan-50 rounded-xl p-6 border border-teal-200">
+                <h3 class="font-display text-xl font-semibold text-gray-800 mb-4">
+                  <i class="fas fa-robot text-teal-600 mr-2"></i>
+                  Kanal: DebtBusters
+                </h3>
+                <p class="text-gray-700 mb-4">
+                  <a href="https://tryaipipeline.com/how-to-make-10000-per-month-on-youtube-without-making-videos/" class="citation">
+                    DebtBusters
+                  </a>
+                  bu AI yordamida yaratilgan muvaffaqiyatli YouTube kanallaridan biri. Ushbu kanal AI asboblari nishasida faoliyat yuritadi.
+                </p>
+                <div class="grid grid-cols-2 gap-4">
+                  <div>
+                    <p class="text-sm text-gray-600">Nisha</p>
+                    <p class="font-semibold text-gray-800">AI Tools</p>
+                  </div>
+                  <div>
+                    <p class="text-sm text-gray-600">Format</p>
+                    <p class="font-semibold text-gray-800">Faceless</p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Revenue Results -->
+              <div class="bg-gradient-to-r from-amber-50 to-orange-50 rounded-xl p-6 border border-amber-200">
+                <h3 class="font-display text-xl font-semibold text-gray-800 mb-4">
+                  <i class="fas fa-chart-line text-amber-600 mr-2"></i>
+                  Daromad: 3 Oyda 0 → $15,000+
+                </h3>
+                <p class="text-gray-700 mb-4">
+                  DebtBusters kanali 3 oy ichida 0 dan boshlab, oyiga 10,000 dollardan ortiq daromad qila boshladi. Ushbu daromad asosan reklama daromadlari, affiliate marketing va o&#39;z kurslarini sotish orqali ta&#39;minlandi.
+                </p>
+                <div class="bg-white rounded-lg p-4">
+                  <p class="text-sm text-gray-600 mb-2">Daromad taqsimoti:</p>
+                  <div class="space-y-1 text-sm">
+                    <div class="flex justify-between">
+                      <span>Reklama daromadi</span>
+                      <span class="font-semibold">40%</span>
+                    </div>
+                    <div class="flex justify-between">
+                      <span>Kurs sotuvi</span>
+                      <span class="font-semibold">30%</span>
+                    </div>
+                    <div class="flex justify-between">
+                      <span>Affiliate marketing</span>
+                      <span class="font-semibold">20%</span>
+                    </div>
+                    <div class="flex justify-between">
+                      <span>Boshqa manbalar</span>
+                      <span class="font-semibold">10%</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- AI Tools Used -->
+              <div class="bg-gradient-to-r from-purple-50 to-pink-50 rounded-xl p-6 border border-purple-200">
+                <h3 class="font-display text-xl font-semibold text-gray-800 mb-4">
+                  <i class="fas fa-cogs text-purple-600 mr-2"></i>
+                  Foydalanilgan AI Asboblari
+                </h3>
+                <div class="grid grid-cols-1 gap-3">
+                  <div class="flex items-center space-x-3">
+                    <i class="fas fa-comments text-green-500"></i>
+                    <span class="text-gray-700">ChatGPT - Skriptlarni yozish</span>
+                  </div>
+                  <div class="flex items-center space-x-3">
+                    <i class="fas fa-microphone text-orange-500"></i>
+                    <span class="text-gray-700">ElevenLabs - Ovozli narratsiya</span>
+                  </div>
+                  <div class="flex items-center space-x-3">
+                    <i class="fas fa-video text-blue-500"></i>
+                    <span class="text-gray-700">Pictory - Video montaj</span>
+                  </div>
+                  <div class="flex items-center space-x-3">
+                    <i class="fas fa-image text-purple-500"></i>
+                    <span class="text-gray-700">Canva/MidJourney - Eskizlar</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Success Visualization -->
+            <div class="bg-white rounded-xl p-6 shadow-md border border-gray-200">
+              <h3 class="font-display text-xl font-semibold text-gray-800 mb-6 text-center">
+                Muvaffaqiyatning Vizualizatsiyasi
+              </h3>
+
+              <div class="chart-container mb-6">
+                <h4 class="font-semibold text-gray-800 mb-4 text-center">Oyma-oy daromad o&#39;sishi</h4>
+                <div class="space-y-3">
+                  <div class="flex items-center justify-between">
+                    <span class="text-sm text-gray-600">1-oy</span>
+                    <div class="flex-1 mx-4">
+                      <div class="bg-gray-200 rounded-full h-3">
+                        <div class="bg-teal-500 h-3 rounded-full" style="width: 5%"></div>
+                      </div>
+                    </div>
+                    <span class="text-sm font-medium text-gray-700">$0 - $500</span>
+                  </div>
+                  <div class="flex items-center justify-between">
+                    <span class="text-sm text-gray-600">2-oy</span>
+                    <div class="flex-1 mx-4">
+                      <div class="bg-gray-200 rounded-full h-3">
+                        <div class="bg-amber-500 h-3 rounded-full" style="width: 40%"></div>
+                      </div>
+                    </div>
+                    <span class="text-sm font-medium text-gray-700">$2,000 - $3,000</span>
+                  </div>
+                  <div class="flex items-center justify-between">
+                    <span class="text-sm text-gray-600">3-oy</span>
+                    <div class="flex-1 mx-4">
+                      <div class="bg-gray-200 rounded-full h-3">
+                        <div class="bg-green-500 h-3 rounded-full" style="width: 100%"></div>
+                      </div>
+                    </div>
+                    <span class="text-sm font-medium text-gray-700">$10,000+</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="highlight-box">
+                <h4 class="font-semibold text-gray-800 mb-2">Muhim Xulosalar</h4>
+                <ul class="space-y-2 text-sm text-gray-700">
+                  <li><i class="fas fa-check text-green-500 mr-2"></i>To&#39;g&#39;ri nishani tanlash muhim</li>
+                  <li><i class="fas fa-check text-green-500 mr-2"></i>AI pipeline yaratish kerak</li>
+                  <li><i class="fas fa-check text-green-500 mr-2"></i>Diversifikatsiya muhim</li>
+                  <li><i class="fas fa-check text-green-500 mr-2"></i>Doimiy rivojlanish zarur</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Conclusion -->
+      <section id="conclusion" class="py-16">
+        <div class="max-w-6xl mx-auto">
+          <h2 class="font-display text-4xl font-bold text-gray-800 mb-12 text-center">
+            Xulosa
+          </h2>
+
+          <div class="highlight-box mb-8">
+            <h3 class="font-display text-2xl font-semibold text-gray-800 mb-4 text-center">
+              AI = Vosita, YouTube = Platforma, Strategiya = Natija
+            </h3>
+            <p class="text-gray-700 text-lg leading-relaxed text-center">
+              AI bu erda asosiy mehnatni o&#39;z zimmasiga oluvchi <strong>vosita</strong>, YouTube esa bu kontentni dunyoga namoyish qiladigan <strong>platforma</strong>, va to&#39;g&#39;ri strategiya esa muvaffaqiyatli <strong>natijaga</strong> erishishning kaliti hisoblanadi.
+            </p>
+          </div>
+
+          <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12">
+            <div class="bg-white rounded-xl p-8 shadow-md border border-gray-200">
+              <h4 class="font-display text-xl font-semibold text-gray-800 mb-4">
+                <i class="fas fa-graduation-cap text-teal-600 mr-2"></i>
+                AI&#39;ni O&#39;rganish
+              </h4>
+              <p class="text-gray-700 mb-4">
+                AI&#39;ni 0 dan o&#39;rganish uchun 6 oy vaqt ajratish mumkin, bu fundamental bilimlarni o&#39;zlashtirish va AI asboblarini o&#39;rganish uchun yetarli vaqt.
+              </p>
+              <div class="flex items-center space-x-4">
+                <div class="bg-teal-100 text-teal-600 rounded-full w-12 h-12 flex items-center justify-center font-bold">6</div>
+                <span class="text-gray-700">Oy - AI o&#39;rganish</span>
+              </div>
+            </div>
+
+            <div class="bg-white rounded-xl p-8 shadow-md border border-gray-200">
+              <h4 class="font-display text-xl font-semibold text-gray-800 mb-4">
+                <i class="fas fa-dollar-sign text-amber-600 mr-2"></i>
+                Daromadga Chiqish
+              </h4>
+              <p class="text-gray-700 mb-4">
+                $10,000 daromadga chiqish uchun esa atigi 3 oy yetarli. Bu 3 oy ichida AI pipeline&#39;ingizni sozlab, kanalingizni ochib, auditoriyangizni yaratib, va daromad manbalarini diversifikatsiya qilishingiz mumkin.
+              </p>
+              <div class="flex items-center space-x-4">
+                <div class="bg-amber-100 text-amber-600 rounded-full w-12 h-12 flex items-center justify-center font-bold">3</div>
+                <span class="text-gray-700">Oy - $10,000 daromad</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="bg-gradient-to-r from-teal-600 to-cyan-600 rounded-2xl p-8 text-white text-center">
+            <h4 class="font-display text-2xl font-semibold mb-4">
+              Motivatsion Quote
+            </h4>
+            <blockquote class="text-2xl italic font-light mb-4">
+              &#34;AI is not replacing you. Someone using AI will.&#34;
+            </blockquote>
+            <p class="text-lg">
+              (AI sizni almashtirmayapti. AI&#39;dan foydalanayotgan odam sizni almashtiradi.)
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Footer -->
+      <footer class="py-12 bg-gray-800 text-white">
+        <div class="max-w-6xl mx-auto text-center">
+          <p class="text-lg mb-4">
+            AI va YouTube orqali daromad olishning amaliy yo&#39;llarini o&#39;rganish va amaliyotga tatbiq etishga undamoq!
+          </p>
+          <div class="flex justify-center space-x-6 text-sm">
+            <a href="https://www.fortunebusinessinsights.com/industry-reports/artificial-intelligence-market-100114" class="text-gray-300 hover:text-white transition-colors">
+              Fortune Business Insights
+            </a>
+            <a href="https://www.lenostube.com/en/youtube-cpm-rpm-rates/" class="text-gray-300 hover:text-white transition-colors">
+              LenosTube CPM Analysis
+            </a>
+            <a href="https://tryaipipeline.com/how-to-make-10000-per-month-on-youtube-without-making-videos/" class="text-gray-300 hover:text-white transition-colors">
+              AI Pipeline Case Study
+            </a>
+          </div>
+        </div>
+      </footer>
+    </main>
+
+    <script>
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Highlight active section in TOC
+        const sections = document.querySelectorAll('section[id]');
+        const tocLinks = document.querySelectorAll('.toc-fixed a[href^="#"]');
+
+        function updateActiveSection() {
+            let currentSection = '';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                if (window.pageYOffset >= sectionTop - 100) {
+                    currentSection = section.getAttribute('id');
+                }
+            });
+
+            tocLinks.forEach(link => {
+                link.classList.remove('bg-teal-100', 'text-teal-900');
+                if (link.getAttribute('href') === '#' + currentSection) {
+                    link.classList.add('bg-teal-100', 'text-teal-900');
+                }
+            });
+        }
+
+        window.addEventListener('scroll', updateActiveSection);
+        updateActiveSection(); // Initial call
+    </script>
+  
+
+</body></html>
+
